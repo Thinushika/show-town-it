@@ -167,3 +167,12 @@ li {
 .swiper-wrapper{
   width: 100vw !important;
 }
+.slidePosition{
+  width: 30px !important;
+  position: absolute;
+  right: 0px !important;
+  background-color: #1f1f1fc4;
+}
+.wrap-button{
+  height: 20vh !important;
+}

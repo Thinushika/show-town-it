@@ -105,6 +105,17 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
+        {
+          slideContent.map((item)=>(
+            <>
+            <div key={item.id} className="wrap-button d-flex justify-content-center align-items-center">
+            <p>0{item.id}</p>
+          </div>
+            </>
+          ))
+        }
+        </div>
       </div>
     </>
   );
