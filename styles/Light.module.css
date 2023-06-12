@@ -1,8 +1,14 @@
 .container {
     background-color: #fff;
     color: #000;
-  }
-  .themeToggleButton{
+}
+
+.themeToggleButton {
     background-color: #fff;
     color: #000;
-  }
+}
+
+.talkButton {
+    background-color: #d90a2c;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
