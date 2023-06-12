@@ -1,4 +1,17 @@
-.container_fullpage{
-    width: 100vw;
-    height: 100vh;
-  }
+.container_fullpage {
+  width: 100vw;
+  height: 100vh;
+}
+
+.toggleButtonSize {
+  width: 100px;
+  height: 30px;
+  text-orientation: upright;
+  border-radius: 30px;
+  margin-left: -20px;
+  border: solid 1px #747474;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
