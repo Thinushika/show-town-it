@@ -1,18 +1,9 @@
-import { Inter } from 'next/font/google'
-import { useEffect } from 'react'
+import React from 'react'
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
-
-  useEffect(() => {
-    
-  }, []);
-  
-  
+const aboutUs = () => {
   return (
     <>
-      <h1>Home</h1>
+      <h1>About Us</h1>
       <p className='w-50 text-center'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut
         neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio
@@ -20,7 +11,8 @@ export default function Home() {
         in volutpat ultrices, lorem elit vestibulum dui, et fermentum nulla
         felis vel lorem.
       </p>
-      
     </>
   )
 }
+
+export default aboutUs
