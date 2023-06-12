@@ -44,7 +44,32 @@ ul,
 li {
   font-family: 'Raleway', sans-serif !important;
 }
+.numberStyle{
+  font-size: 12px;
+  color: #ffffff62;
+  line-height: 12px;
+  transition: color 0.5s ease;
+  cursor: pointer;
+}
+.nav-item{
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  transition: color 0.5s ease;
+}
+.nav-link{
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  transition: color 0.5s ease;
+}
 
-@media (prefers-color-scheme: dark) {
-  html {}
+.numberStyle:hover .nav-link{
+  color: #d90a2c !important;
+}
+.nav-item:hover .numberStyle,
+.nav-item:hover .nav-link{
+  color: #d90a2c !important;
+}
+.nav-item:hover, .nav-item:active, .nav-item:focus,
+.nav-link:hover, .nav-link:active, .nav-link:focus{
+  color: #d90a2c !important;
 }

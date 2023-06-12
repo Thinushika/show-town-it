@@ -3,7 +3,7 @@ import React from 'react'
 const services = () => {
   return (
     <>
-      <h1>Next.js Dark and Light Mode Example</h1>
+      <h1>Services</h1>
       <p className='w-50 text-center'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut
         neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio

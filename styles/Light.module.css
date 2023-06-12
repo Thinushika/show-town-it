@@ -12,3 +12,7 @@
     background-color: #d90a2c;
     transition: background-color 0.5s ease, color 0.5s ease;
 }
+
+.txtColor{
+    color:#000
+}
