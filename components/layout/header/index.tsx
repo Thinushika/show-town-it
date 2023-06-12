@@ -58,7 +58,7 @@ const Header = () => {
 
   return (
     <div
-      className="w-100 position-absolute top-0 left-0 py-2"
+      className="w-100 position-absolute top-0 left-0 py-2 px-2"
       style={{ zIndex: "999", height: "150px" }}
     >
       <nav className="navbar navbar-expand-lg">
