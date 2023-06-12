@@ -19,3 +19,9 @@
 .txtColor{
     color:#fff
 }
+.heroButton{
+    color: #fff;
+}
+.heroImageBg{
+    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
+}
