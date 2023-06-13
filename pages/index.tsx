@@ -39,7 +39,8 @@ export default function Home() {
 
   const slideContent = [
     {
-      id: 1,
+      id: 0,
+      slideNumber: 1,
       path: "/imgs/",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
@@ -48,7 +49,8 @@ export default function Home() {
       link: "/",
     },
     {
-      id: 2,
+      id: 1,
+      slideNumber: 2,
       path: "/imgs/",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
@@ -57,7 +59,28 @@ export default function Home() {
       link: "/",
     },
     {
+      id: 2,
+      slideNumber: 3,
+      path: "/imgs/",
+      dateTitlePart1: "Strategy, UI/UX",
+      dateTitlePart2: "June 23, 2023",
+      title: "WRE 22 CrossFit World’s Relays.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      link: "/",
+    },
+    {
       id: 3,
+      slideNumber: 4,
+      path: "/imgs/",
+      dateTitlePart1: "Strategy, UI/UX",
+      dateTitlePart2: "June 23, 2023",
+      title: "WRE 22 CrossFit World’s Relays.",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      link: "/",
+    },
+    {
+      id: 4,
+      slideNumber: 5,
       path: "/imgs/",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
@@ -73,6 +96,7 @@ export default function Home() {
   const bgStyles =
     theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
 
+    
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
@@ -82,16 +106,22 @@ export default function Home() {
           spaceBetween={0}
           slidesPerView={1}
           effect="fade"
-          speed={1000}
+          speed={500}
           loop={true}
+          // scrollbar={{ draggable: true }}
+          pagination={{ clickable: true }}
           navigation={true}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={(swiper) => setActiveButtonIndex(swiper.activeIndex)}
+          onSlideChange={(swiper) => {
+            console.log(swiper.activeIndex)
+            setActiveButtonIndex(swiper.activeIndex)
+          }}
         >
           {slideContent.map((item) => (
             <SwiperSlide key={item.id}>
+              <div className="w-100 h-100 d-flex justify-content-center align-items-center">
               <div className="d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column w-100 p-0 m-0 position-relative">
+                <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
                   <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
                     {item.title}
                   </div>
@@ -115,28 +145,28 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
+        {/* <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
           {slideContent.map((item , index) => (
             <div
               key={item.id}
               className="wrap-button d-flex justify-content-center align-items-center"
             >
-              {/* <p className="slide-number">0{item.id}</p> */}
               <button
                 className={`slide-number ${index === activeButtonIndex ? 'activeButton' : ''}`}
                 onClick={() => {
-                  setActiveSlide(item.id);
+                  setActiveSlide(index);
                   setActiveButtonIndex(index);
                 }}
               >
-                0{item.id}
+                0{item.slideNumber}
               </button>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );

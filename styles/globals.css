@@ -166,7 +166,7 @@ li {
 }
 .swiper-wrapper{
   width: 100vw !important;
-  height: 70vh !important;
+  height: 100vh !important;
 }
 .slidePosition{
   width: 40px !important;
@@ -199,4 +199,35 @@ li {
 
 .activeButton {
   background-color: #ff0000 !important; 
+}
+.navbarWidth{
+  width: 98vw !important;
+}
+
+.swiper-pagination{
+  position: absolute !important;
+  left: 98vw !important;
+  top: 0 !important;
+  text-align: center !important;
+  width: 2vw !important;
+  height: 100vh !important;
+  background-color: #111111a1 !important;
+  display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    z-index: 99999;
+}
+.swiper-pagination-bullet{
+  background-color: transparent !important;
+  width: 100% !important;
+  height: 20vh !important;
+  border-radius: 0px !important;
+  margin: 0 !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: #be0707 !important;
+  width: 100% !important;
+  height: 20vh !important;
+  border-radius: 0px !important;
+  margin: 0 !important;
 }
