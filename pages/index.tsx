@@ -10,6 +10,7 @@ import {
   A11y,
   Autoplay,
   EffectFade,
+  Mousewheel
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +21,8 @@ import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+import "swiper/css/mousewheel";
+
 import Image from "next/image";
 import { ThemeContext } from "@/components/theme/ThemeProvider";
 
@@ -104,13 +107,14 @@ export default function Home() {
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
         <Swiper
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
+          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Mousewheel]}
           spaceBetween={0}
           slidesPerView={1}
           effect="fade"
           speed={500}
           loop={true}
-          // scrollbar={{ draggable: true }}
+          mousewheel
+          // scrollbar={{ draggable: true,  }}
           pagination={{ clickable: true }}
           navigation={true}
           onSwiper={(swiper) => console.log(swiper)}
