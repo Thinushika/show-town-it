@@ -388,6 +388,14 @@ li {
 .form-checkbox:active{
   background-color: #d90a2c !important;
 }
+.footer-sec-2 h3{
+  font-size: 16px;
+  font-weight: 500;
+}
+.footer-sec-2 p{
+  font-size: 14px;
+  font-weight: 400;
+}
 @media screen and (max-width: 600px){
   .left-right-space{
     padding-left: 20px !important;
