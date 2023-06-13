@@ -449,6 +449,14 @@ li {
 
 
 
+.product-img-style{
+  border-radius: 8px;
+}
+.product-col{
+  background-color: #33333338;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 600px){
   .left-right-space{
     padding-left: 20px !important;
