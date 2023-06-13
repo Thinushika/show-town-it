@@ -429,6 +429,26 @@ li {
   font-size: 16px;
   color: #b9b9b9;
 }
+.hr-footer{
+  color: #b9b9b9 !important
+}
+
+
+
+.services-styles h3{
+  font-size: 20px;
+  font-weight: 500;
+}
+.services-styles p{
+  font-size: 15px;
+  font-weight: 400;
+}
+.icon-style{
+  font-size: 30px;
+}
+
+
+
 @media screen and (max-width: 600px){
   .left-right-space{
     padding-left: 20px !important;

@@ -80,7 +80,7 @@ const SectionTwo = () => {
           </div>
         </div>
       </div>
-      <hr style={{color:'#fff !important'}} />
+      <hr className="hr-footer" />
     </>
   );
 };
