@@ -25,3 +25,19 @@
 .heroImageBg{
     background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
 }
+
+.swiper-button-prev {
+    background-image: url("/imgs/prev-light-arrow.png") !important;
+    background-position: center;
+    background-size: cover;
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .swiper-button-next {
+    background-image: url("/imgs/next-light-arrow.png") !important;
+    background-position: center;
+    background-size: cover;
+    width: 40px !important;
+    height: 40px !important;
+  }

@@ -41,7 +41,7 @@ export default function Home() {
     {
       id: 0,
       slideNumber: 1,
-      path: "/imgs/",
+      path: "/imgs/hero-img (1).jpeg",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "JBQ Crafting Official Collab",
@@ -51,7 +51,7 @@ export default function Home() {
     {
       id: 1,
       slideNumber: 2,
-      path: "/imgs/",
+      path: "/imgs/hero-img (2).jpeg",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "Diseño Ave K3 Business Center.",
@@ -61,7 +61,7 @@ export default function Home() {
     {
       id: 2,
       slideNumber: 3,
-      path: "/imgs/",
+      path: "/imgs/hero-img (3).jpeg",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
@@ -71,7 +71,7 @@ export default function Home() {
     {
       id: 3,
       slideNumber: 4,
-      path: "/imgs/",
+      path: "/imgs/hero-img (4).jpeg",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
@@ -81,7 +81,7 @@ export default function Home() {
     {
       id: 4,
       slideNumber: 5,
-      path: "/imgs/",
+      path: "/imgs/hero-img (5).jpeg",
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
@@ -90,6 +90,8 @@ export default function Home() {
     },
   ];
 
+  const next = "swiper-button-next"
+  const prev = "swiper-button-prev"
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
     theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
@@ -128,6 +130,11 @@ export default function Home() {
                   <div
                     className={`d-flex position-absolute hero-image-bg top-0 left-0 ${bgStyles}`}
                   ></div>
+                  <div
+                    className={`d-flex position-absolute hero-image-bg-image top-0 left-0 ${bgStyles}`}
+                  >
+                    <Image src={item.path} alt='' width={992} height={992} className="img-fluid" />
+                  </div>
                   <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                   <div className="d-flex flex-column w-50 m-0 s-space hero py-5">
                     <p>
