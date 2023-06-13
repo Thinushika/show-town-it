@@ -1,8 +1,13 @@
+import Footer from "@/components/layout/footer";
 import React from "react";
+import MainSectionOurWorks from "@/components/mainSections/OurWorks";
 
 const ourWorks = () => {
   return (
     <>
+    <MainSectionOurWorks />
+      {/* space */}
+      <div className="space-section"></div>
       <h1>Our Works</h1>
       <p className="w-50 text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut
@@ -11,6 +16,7 @@ const ourWorks = () => {
         in volutpat ultrices, lorem elit vestibulum dui, et fermentum nulla
         felis vel lorem.
       </p>
+      <Footer />
     </>
   );
 };

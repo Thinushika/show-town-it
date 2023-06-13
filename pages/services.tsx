@@ -1,8 +1,13 @@
+import Footer from '@/components/layout/footer'
 import React from 'react'
+import MainSectionServices from '@/components/mainSections/Services'
 
 const services = () => {
   return (
     <>
+    <MainSectionServices />
+      {/* space */}
+      <div className="space-section"></div>
       <h1>Services</h1>
       <p className='w-50 text-center'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut
@@ -11,6 +16,7 @@ const services = () => {
         in volutpat ultrices, lorem elit vestibulum dui, et fermentum nulla
         felis vel lorem.
       </p>
+      <Footer />
       </>
   )
 }

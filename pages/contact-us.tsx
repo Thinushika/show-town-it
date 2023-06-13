@@ -1,11 +1,12 @@
-import MainSection from "@/components/contact/MainSection";
+import Footer from "@/components/layout/footer";
 import Link from "next/link";
 import React from "react";
+import MainSectionContact from "@/components/mainSections/ContactUs";
 
 const contactUs = () => {
   return (
     <>
-      <MainSection />
+      <MainSectionContact />
       {/* space */}
       <div className="space-section"></div>
 
@@ -149,6 +150,7 @@ const contactUs = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

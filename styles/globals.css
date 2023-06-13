@@ -88,7 +88,7 @@ li {
 }
 
 .s-space {
-  padding-left: 120px !important;
+  padding-left: 100px !important;
 }
 
 .hero {
@@ -315,8 +315,8 @@ li {
   font-weight: 500;
 }
 .left-right-space{
-  padding-left: 120px !important;
-  padding-right: 120px !important;
+  padding-left: 100px !important;
+  padding-right: 100px !important;
 }
 .space-section{
   height: 75vh;
@@ -382,5 +382,8 @@ li {
   .left-right-space{
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+  .s-space {
+    padding-left: 20px !important;
   }
 }
