@@ -39,8 +39,9 @@ const ClientsLogo = () => {
   ];
   return (
     <>
-    <div className="d-flex px-0 px-lg-5 w-100">
-      <div className="d-flex row row-cols-1 row-cols-sm-2 row-cols-lg-4 w-100 left-right-space py-5 my-5 services-styles">
+    <div className="d-flex flex-column text-center px-0 px-lg-5 w-100 pt-5 mt-5">
+        <h2>Our Clients</h2>
+      <div className="d-flex row row-cols-1 row-cols-sm-2 row-cols-lg-4 w-100 left-right-space pb-5 mb-5 services-styles">
         {logos.map((item) => (
           <div key={item.id} className="col p-3 ">
             <Image
