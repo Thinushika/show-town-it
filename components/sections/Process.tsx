@@ -23,7 +23,7 @@ const Process = () => {
     },
   ];
   return (
-    <div className="d-flex flex-column text-center px-0 w-100 pt-5 mt-5">
+    <div className="d-flex flex-column text-center px-0 w-100">
       <h2>Process</h2>
       <div className="d-flex row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 left-right-space pb-5 mb-5 process-styles">
         {prodessData.map((item) => (
