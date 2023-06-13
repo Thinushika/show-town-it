@@ -326,13 +326,23 @@ li {
   font-size: 16px;
   line-height: 22px;
 }
-.social-links{
+.social-links, .links-style{
   color: #919191;
   font-weight: 700;
   font-size: 16px;
   transition: color 0.5s ease;
 }
-.social-links:hover{
+.links-style{
+  color: #919191;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.5s ease;
+}
+.footer-text{
+  font-size: 15px;
+  font-weight: 500;
+}
+.social-links:hover , .links-style:hover{
   color: #d90a2c;
 }
 .contact-form{
