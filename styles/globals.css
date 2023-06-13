@@ -169,16 +169,22 @@ li {
   height: 70vh !important;
 }
 .slidePosition{
-  width: 30px !important;
+  width: 40px !important;
   position: absolute;
   right: 0px !important;
-  background-color: #1f1f1fc4;
+  background-color: #0a0a0aa1;
 }
 .wrap-button{
   height: 20vh !important;
+  width: 40px !important;
 }
 .slide-number{
   font-weight: 500;
+  background-color: transparent !important;
+  border: none;
+  width: 40px !important;
+  height: 20vh !important;
+  color: #fff;
 }
 
 .swiper-button-prev{
@@ -189,4 +195,8 @@ li {
 .swiper-button-next{
   margin-right: 10vw !important;
   margin-top: 25vh !important;
+}
+
+.activeButton {
+  background-color: #ff0000 !important; 
 }

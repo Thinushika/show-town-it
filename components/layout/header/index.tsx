@@ -53,12 +53,12 @@ const Header = () => {
   const { theme } = useContext(ThemeContext);
   const LinkStyle =
     theme === "dark" ? darkStyles.txtColor : lightStyles.txtColor;
-    const SpanStyles =
+  const SpanStyles =
     theme === "dark" ? darkStyles.txtColor : lightStyles.txtColor;
 
   return (
     <div
-      className="w-100 position-absolute top-0 left-0 py-2 px-2"
+      className="w-100 position-absolute top-0 left-0 py-2 ps-2 pe-2 pe-lg-5"
       style={{ zIndex: "999", height: "150px" }}
     >
       <nav className="navbar navbar-expand-lg">
@@ -95,18 +95,21 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               {navItems.map((item) => (
-                <>
-                  <li key={item.id} className="nav-item ps-2 pe-2 ps-lg-3 pe-lg-0 d-flex flex-column text-end">
-                    <span className={`${LinkStyle} numberStyle`}>{item.number}</span>
-                    <Link
-                      className={`${SpanStyles} nav-link pe-lg-0 pt-lg-0`}
-                      aria-current="page"
-                      href={item.path}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                </>
+                <li
+                  key={item.id}
+                  className="nav-item ps-2 pe-2 ps-lg-3 pe-lg-0 d-flex flex-column text-end"
+                >
+                  <span className={`${LinkStyle} numberStyle`}>
+                    {item.number}
+                  </span>
+                  <Link
+                    className={`${SpanStyles} nav-link pe-lg-0 pt-lg-0`}
+                    aria-current="page"
+                    href={item.path}
+                  >
+                    {item.title}
+                  </Link>
+                </li>
               ))}
             </ul>
             <LetsTalkButton />

@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 import {
@@ -30,7 +30,12 @@ import darkStyles from "@/styles//Dark.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  useEffect(() => {}, []);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+
+  useEffect(() => {
+    console.log("Active : ", activeSlide);
+  }, [activeSlide]);
 
   const slideContent = [
     {
@@ -81,7 +86,7 @@ export default function Home() {
           loop={true}
           navigation={true}
           onSwiper={(swiper) => console.log(swiper)}
-          onSlideChange={() => console.log("slide change")}
+          onSlideChange={(swiper) => setActiveButtonIndex(swiper.activeIndex)}
         >
           {slideContent.map((item) => (
             <SwiperSlide key={item.id}>
@@ -114,15 +119,22 @@ export default function Home() {
           ))}
         </Swiper>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
-          {slideContent.map((item) => (
-            <>
-              <div
-                key={item.id}
-                className="wrap-button d-flex justify-content-center align-items-center"
+          {slideContent.map((item , index) => (
+            <div
+              key={item.id}
+              className="wrap-button d-flex justify-content-center align-items-center"
+            >
+              {/* <p className="slide-number">0{item.id}</p> */}
+              <button
+                className={`slide-number ${index === activeButtonIndex ? 'activeButton' : ''}`}
+                onClick={() => {
+                  setActiveSlide(item.id);
+                  setActiveButtonIndex(index);
+                }}
               >
-                <p className="slide-number">0{item.id}</p>
-              </div>
-            </>
+                0{item.id}
+              </button>
+            </div>
           ))}
         </div>
       </div>
