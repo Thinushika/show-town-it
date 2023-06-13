@@ -166,6 +166,7 @@ li {
 }
 .swiper-wrapper{
   width: 100vw !important;
+  height: 70vh !important;
 }
 .slidePosition{
   width: 30px !important;
@@ -175,4 +176,17 @@ li {
 }
 .wrap-button{
   height: 20vh !important;
+}
+.slide-number{
+  font-weight: 500;
+}
+
+.swiper-button-prev{
+  margin-left: 80vw !important;
+  margin-top: 25vh !important;
+}
+
+.swiper-button-next{
+  margin-right: 10vw !important;
+  margin-top: 25vh !important;
 }

@@ -3,7 +3,14 @@ import Link from "next/link";
 import { useContext, useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectFade } from "swiper";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  EffectFade,
+} from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -52,13 +59,13 @@ export default function Home() {
       title: "WRE 22 CrossFit World’s Relays.",
       desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
       link: "/",
-    }
+    },
   ];
 
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
     theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
-    const bgStyles =
+  const bgStyles =
     theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
 
   return (
@@ -73,7 +80,6 @@ export default function Home() {
           speed={1000}
           loop={true}
           navigation={true}
-          scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
@@ -84,7 +90,9 @@ export default function Home() {
                   <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
                     {item.title}
                   </div>
-                  <div className={`d-flex position-absolute hero-image-bg top-0 left-0 ${bgStyles}`}></div>
+                  <div
+                    className={`d-flex position-absolute hero-image-bg top-0 left-0 ${bgStyles}`}
+                  ></div>
                   <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                   <div className="d-flex flex-column w-50 m-0 s-space hero py-5">
                     <p>
@@ -106,15 +114,16 @@ export default function Home() {
           ))}
         </Swiper>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
-        {
-          slideContent.map((item)=>(
+          {slideContent.map((item) => (
             <>
-            <div key={item.id} className="wrap-button d-flex justify-content-center align-items-center">
-            <p>0{item.id}</p>
-          </div>
+              <div
+                key={item.id}
+                className="wrap-button d-flex justify-content-center align-items-center"
+              >
+                <p className="slide-number">0{item.id}</p>
+              </div>
             </>
-          ))
-        }
+          ))}
         </div>
       </div>
     </>
