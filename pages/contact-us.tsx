@@ -1,4 +1,4 @@
-import MainSection from "@/components/contact/mainSection";
+import MainSection from "@/components/contact/MainSection";
 import React from "react";
 
 const contactUs = () => {

@@ -286,3 +286,31 @@ li {
 .swiper-rtl .swiper-button-prev:after {
   display: none !important;
 }
+
+
+.bg-image{
+  background-image: url('/imgs/contact-main-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 75vh;
+}
+
+.red-button{
+  background-color: #d90a2c;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  height: max-content;
+  width: max-content;
+  border: none;
+}
+.agency h2{
+  font-size: 60px;
+}
+.agency p{
+  font-size: 18px;
+  font-weight: 500;
+}
