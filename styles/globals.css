@@ -314,3 +314,30 @@ li {
   font-size: 18px;
   font-weight: 500;
 }
+.left-right-space{
+  padding-left: 120px !important;
+  padding-right: 120px !important;
+}
+.space-section{
+  height: 75vh;
+}
+.contact p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+.social-links{
+  color: #919191;
+  font-weight: 700;
+  font-size: 16px;
+  transition: color 0.5s ease;
+}
+.social-links:hover{
+  color: #d90a2c;
+}
+@media screen and (max-width: 600px){
+  .left-right-space{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
