@@ -169,10 +169,12 @@ li {
   height: 100vh !important;
 }
 .slidePosition{
-  width: 40px !important;
+  width: 2vw !important;
   position: absolute;
   right: 0px !important;
-  background-color: #0a0a0aa1;
+  background-color: transparent;
+  z-index: 999999;
+  pointer-events: none;
 }
 .wrap-button{
   height: 20vh !important;
@@ -225,7 +227,7 @@ li {
   margin: 0 !important;
 }
 .swiper-pagination-bullet-active{
-  background-color: #be0707 !important;
+  background-color: #131313 !important;
   width: 100% !important;
   height: 20vh !important;
   border-radius: 0px !important;

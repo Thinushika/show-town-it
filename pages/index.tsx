@@ -149,24 +149,20 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-        {/* <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
+        <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
           {slideContent.map((item , index) => (
             <div
               key={item.id}
               className="wrap-button d-flex justify-content-center align-items-center"
             >
               <button
-                className={`slide-number ${index === activeButtonIndex ? 'activeButton' : ''}`}
-                onClick={() => {
-                  setActiveSlide(index);
-                  setActiveButtonIndex(index);
-                }}
+                className={`slide-number`}
               >
                 0{item.slideNumber}
               </button>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </>
   );
