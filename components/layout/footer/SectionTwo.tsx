@@ -80,7 +80,7 @@ const SectionTwo = () => {
           </div>
         </div>
       </div>
-      <hr />
+      <hr style={{color:'#fff !important'}} />
     </>
   );
 };

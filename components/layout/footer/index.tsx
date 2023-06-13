@@ -5,11 +5,13 @@ import SectionTwo from './SectionTwo'
 
 const Footer = () => {
   return (
+    <>
+    <SectionOne />
     <div className="d-flex w-100 flex-column left-right-space">
-      <SectionOne />
       <SectionTwo />
       <SectionThree />
     </div>
+    </>
   )
 }
 
