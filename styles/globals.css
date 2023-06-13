@@ -240,7 +240,7 @@ li {
   text-align: center !important;
   width: 2vw !important;
   height: 100vh !important;
-  background-color: #111111a1 !important;
+  background-color: #0000006b !important;
   display: flex;
   flex-direction: column;
   padding: 0 !important;
@@ -256,7 +256,7 @@ li {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #131313 !important;
+  background-color: #0000009a !important;
   width: 100% !important;
   height: 20vh !important;
   border-radius: 0px !important;
