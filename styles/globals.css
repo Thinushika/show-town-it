@@ -457,6 +457,18 @@ li {
   border-radius: 8px;
 }
 
+.process-styles h3{
+  font-size: 30px;
+  font-weight: 500;
+}
+.process-styles p{
+  font-size: 15px;
+  font-weight: 400;
+}
+.process-styles span{
+  font-size: 12px;
+  font-weight: 500;
+}
 @media screen and (max-width: 600px){
   .left-right-space{
     padding-left: 20px !important;
