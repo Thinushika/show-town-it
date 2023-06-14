@@ -10,7 +10,7 @@ import {
   A11y,
   Autoplay,
   EffectFade,
-  Mousewheel
+  Mousewheel,
 } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -93,25 +93,31 @@ export default function Home() {
     },
   ];
 
-  const next = "swiper-button-next"
-  const prev = "swiper-button-prev"
+  const next = "swiper-button-next";
+  const prev = "swiper-button-prev";
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
     theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
   const bgStyles =
     theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
 
-    const sliderStyles =
+  const sliderStyles =
     theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
 
-    
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
         <Swiper
-        id="homeSlider"
-          modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Mousewheel]}
+          id="homeSlider"
+          modules={[
+            Navigation,
+            Pagination,
+            Scrollbar,
+            A11y,
+            EffectFade,
+            Mousewheel,
+          ]}
           spaceBetween={0}
           slidesPerView={1}
           effect="fade"
@@ -123,58 +129,104 @@ export default function Home() {
           navigation={true}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={(swiper) => {
-            console.log(swiper.activeIndex)
-            setActiveButtonIndex(swiper.activeIndex)
+            console.log(swiper.activeIndex);
+            setActiveButtonIndex(swiper.activeIndex);
           }}
         >
           {slideContent.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className={`w-100 h-100 d-flex justify-content-center align-items-center ${sliderStyles}`}>
-              <div className="d-flex justify-content-center align-items-center">
-                <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
-                  <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
-                    {item.title}
-                  </div>
-                  <div
-                    className={`d-flex position-absolute hero-image-bg top-0 left-0 ${bgStyles}`}
-                  ></div>
-                  <div
-                    className={`d-flex position-absolute hero-image-bg-image top-0 left-0 ${bgStyles}`}
-                  >
-                    <Image src={item.path} alt='' width={1360} height={992} className="img-fluid" />
-                  </div>
-                  <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
-                  <div className="d-flex flex-column w-50 m-0 s-space hero py-5">
-                    <p>
-                      {item.dateTitlePart1}
-                      <span className="red-font">.</span>
-                      {item.dateTitlePart2}
-                    </p>
-                    <h2>{item.title}</h2>
-                    <p className="">{item.desc}</p>
-                    <Link href={"/"}>
-                      <button className={`${buttonStyles} px-2 py-2`}>
-                        Show Project <BsArrowRight className="ms-2" />{" "}
-                      </button>
-                    </Link>
+              <div
+                className={`w-100 h-100 d-none d-lg-flex justify-content-center align-items-center ${sliderStyles}`}
+              >
+                <div className="d-flex justify-content-center align-items-center height-75">
+                  <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
+                    <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
+                      {item.title}
+                    </div>
+                    <div
+                      className={`d-flex position-absolute hero-image-bg height-75 top-0 left-0 ${bgStyles}`}
+                    ></div>
+                    <div
+                      className={`d-flex position-absolute hero-image-bg-image height-75 top-0 left-0 ${bgStyles}`}
+                    >
+                      <Image
+                        src={item.path}
+                        alt=""
+                        width={1360}
+                        height={992}
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
+                    <div className="d-flex flex-column w-100 w-lg-50 m-0 s-space hero py-5">
+                      <p>
+                        {item.dateTitlePart1}
+                        <span className="red-font">.</span>
+                        {item.dateTitlePart2}
+                      </p>
+                      <h2>{item.title}</h2>
+                      <p className="">{item.desc}</p>
+                      <Link href={"/"}>
+                        <button className={`${buttonStyles} px-2 py-2`}>
+                          Show Project <BsArrowRight className="ms-2" />{" "}
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              {/* mobile */}
+              <div
+                className={`w-100 h-100 d-flex d-lg-none justify-content-center align-items-center ${sliderStyles}`}
+              >
+                <div className="d-flex justify-content-center align-items-center height-75">
+                  <div className="d-flex flex-column align-items-end justify-content-end w-100 h-100 p-0 m-0 position-relative ">
+                    <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
+                      {item.title}
+                    </div>
+                    <div
+                      className={`d-flex position-absolute hero-image-bg height-75 top-0 left-0 ${bgStyles}`}
+                    ></div>
+                    <div
+                      className={`d-flex position-absolute hero-image-bg-image height-75 top-0 left-0 ${bgStyles}`}
+                    >
+                      <Image
+                        src={item.path}
+                        alt=""
+                        width={1360}
+                        height={992}
+                        className="img-fluid"
+                      />
+                    </div>
+                    <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
+                    <div className="d-flex flex-column w-100 pe-5 s-space hero py-5">
+                      <p>
+                        {item.dateTitlePart1}
+                        <span className="red-font">.</span>
+                        {item.dateTitlePart2}
+                      </p>
+                      <h2 className="pe-4">{item.title}</h2>
+                      <p className="pe-4">{item.desc}</p>
+                      <Link href={"/"}>
+                        <button className={`${buttonStyles} px-2 py-2`}>
+                          Show Project <BsArrowRight className="ms-2" />{" "}
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
-          {slideContent.map((item , index) => (
+          {slideContent.map((item, index) => (
             <div
               key={item.id}
               className="wrap-button d-flex justify-content-center align-items-center"
             >
-              <button
-                className={`slide-number`}
-              >
-                0{item.slideNumber}
-              </button>
+              <button className={`slide-number`}>0{item.slideNumber}</button>
             </div>
           ))}
         </div>
