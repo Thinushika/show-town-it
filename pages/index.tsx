@@ -101,12 +101,16 @@ export default function Home() {
   const bgStyles =
     theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
 
+    const sliderStyles =
+    theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
+
     
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
         <Swiper
+        id="homeSlider"
           modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade, Mousewheel]}
           spaceBetween={0}
           slidesPerView={1}
@@ -125,7 +129,7 @@ export default function Home() {
         >
           {slideContent.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="w-100 h-100 d-flex justify-content-center align-items-center">
+              <div className={`w-100 h-100 d-flex justify-content-center align-items-center ${sliderStyles}`}>
               <div className="d-flex justify-content-center align-items-center">
                 <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
                   <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
