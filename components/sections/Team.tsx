@@ -72,9 +72,43 @@ const Team = () => {
     },
   ];
 
+
+  const teamDataMobile = [
+    {
+      id: 1,
+      name: "Stephanie Lawrence",
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
+      imgPath: "/imgs/products/products (1).jpeg",
+    },
+    {
+      id: 2,
+      name: "Stephanie Lawrence",
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
+      imgPath: "/imgs/products/products (2).jpeg",
+    },
+    {
+      id: 3,
+      name: "Stephanie Lawrence",
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
+      imgPath: "/imgs/products/products (3).jpeg",
+    },
+  ];
+
   return (
     <>
-      <div className="d-flex flex-column w-100 img-height position-relative">
+      <div className="d-none d-lg-flex flex-column w-100 img-height position-relative">
         <div className="d-flex flex-column flex-lg-row w-100 h-100">
           {teamData.map((item) => (
             <div
@@ -117,6 +151,43 @@ const Team = () => {
                   className=" img-fluid img-height"
                 />
               )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* mobile */}
+      <div className="d-flex d-lg-none flex-column w-100 img-height position-relative">
+        <div className="d-flex flex-column flex-lg-row w-100 h-100">
+          {teamDataMobile.map((item) => (
+            <div
+              key={item.id}
+              className="col-12 col-lg-3 d-flex flex-column justify-content-end h-100"
+            >
+              <div className="d-flex flex-column px-3 py-5">
+              <h2>{item.name}</h2>
+              <p>{item.position}</p>
+              <p>{item.desc}</p>
+              <div className="d-flex flex-row">
+                <Link className="social-icon-team me-2" href={item.socialLink1}>
+                  <FaBehance className="m-0 p-0" />
+                </Link>
+                <Link className="social-icon-team me-2" href={item.socialLink2}>
+                  <FaFacebookF className="m-0 p-0" />
+                </Link>
+                <Link className="social-icon-team me-2" href={item.socialLink3}>
+                  <FaInstagram className="m-0 p-0" />
+                </Link>
+              </div>
+              </div>
+              <Image
+                  src={item.imgPath}
+                  alt=""
+                  width={400}
+                  height={600}
+                  className=" img-fluid img-height"
+                />
             </div>
           ))}
         </div>
