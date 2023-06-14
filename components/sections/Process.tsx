@@ -27,7 +27,7 @@ const Process = () => {
       <h2>Process</h2>
       <div className="d-flex row row-cols-1 row-cols-sm-2 row-cols-lg-3 w-100 left-right-space pb-5 mb-5 process-styles">
         {prodessData.map((item) => (
-          <div key={item.id} className="col p-4 text-start">
+          <div key={item.id} className="col p-2 p-lg-4 text-start">
             <span>{item.step}</span>
             <h3>{item.title}</h3>
             <p>{item.desc}</p>
