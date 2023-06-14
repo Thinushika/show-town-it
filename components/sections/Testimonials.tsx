@@ -101,7 +101,7 @@ const Testimonials = () => {
           {testimonialsData.map((item) => (
             <SwiperSlide key={item.id}>
               <div
-                className={`d-flex testimonial-slider-style flex-column px-5 py-5 ${sliderStyles}`}
+                className={`d-flex testimonial-slider-style flex-column px-lg-5 py-5 ${sliderStyles}`}
               >
                 <Image
                   src={item.imgPath}
@@ -117,7 +117,7 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="d-flex flex-row align-items-center px-5">
+        <div className="d-flex flex-row align-items-center px-lg-5">
           <p className="mb-0">{activeButtonIndex}</p>
           <div className="slideline mx-2"></div>
           <p className="mb-0 ">{testimonialsData.length}</p>

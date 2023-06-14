@@ -647,4 +647,7 @@ li {
   .hero h2{
     font-size: 40px;
   }
+  .img-height{
+    height: auto !important;
+  }
 }

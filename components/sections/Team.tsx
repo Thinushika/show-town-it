@@ -98,7 +98,7 @@ const Team = () => {
             </div>
           ))}
         </div>
-        <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0">
+        <div className="d-flex flex-column flex-lg-row w-100 position-relative position-lg-absolute top-0 left-0">
           {teamImages.map((item) => (
             <div
               key={item.id}
