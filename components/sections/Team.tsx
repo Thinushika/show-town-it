@@ -1,45 +1,55 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { FaBehance, FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Team = () => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (id: any) => {
+    setHoveredItem(id);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   const teamData = [
     {
       id: 1,
       name: "Stephanie Lawrence",
-      position:"CEO, Colabrio Media",
-      desc: 'Stephanie is an architect and founding partner, providing smart & flexible digital services.',
-      socialLink1:'#',
-      socialLink2:'#',
-      socialLink3:'#',
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
     },
     {
       id: 2,
       name: "Stephanie Lawrence",
-      position:"CEO, Colabrio Media",
-      desc: 'Stephanie is an architect and founding partner, providing smart & flexible digital services.',
-      socialLink1:'#',
-      socialLink2:'#',
-      socialLink3:'#',
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
     },
     {
       id: 3,
       name: "Stephanie Lawrence",
-      position:"CEO, Colabrio Media",
-      desc: 'Stephanie is an architect and founding partner, providing smart & flexible digital services.',
-      socialLink1:'#',
-      socialLink2:'#',
-      socialLink3:'#',
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
     },
     {
       id: 3,
       name: "Stephanie Lawrence",
-      position:"CEO, Colabrio Media",
-      desc: 'Stephanie is an architect and founding partner, providing smart & flexible digital services.',
-      socialLink1:'#',
-      socialLink2:'#',
-      socialLink3:'#',
+      position: "CEO, Colabrio Media",
+      desc: "Stephanie is an architect and founding partner, providing smart & flexible digital services.",
+      socialLink1: "#",
+      socialLink2: "#",
+      socialLink3: "#",
     },
   ];
 
@@ -75,9 +85,15 @@ const Team = () => {
               <p>{item.position}</p>
               <p>{item.desc}</p>
               <div className="d-flex flex-row">
-                <Link href={item.socialLink1}><FaBehance /></Link>
-                <Link href={item.socialLink2}><FaFacebookF /></Link>
-                <Link href={item.socialLink3}><FaInstagram /></Link>
+                <Link href={item.socialLink1}>
+                  <FaBehance />
+                </Link>
+                <Link href={item.socialLink2}>
+                  <FaFacebookF />
+                </Link>
+                <Link href={item.socialLink3}>
+                  <FaInstagram />
+                </Link>
               </div>
             </div>
           ))}
@@ -86,7 +102,11 @@ const Team = () => {
           {teamImages.map((item) => (
             <div
               key={item.id}
-              className={`col-12 col-lg-3 justify-content-center align-items-center text-center`}
+              className={`col-12 col-lg-3 justify-content-center align-items-center text-center ${
+                hoveredItem === item.id ? "order-lg-first" : ""
+              }`}
+              onMouseEnter={() => handleMouseEnter(item.id)}
+              onMouseLeave={handleMouseLeave}
             >
               {item.imgPath !== "" && (
                 <Image
