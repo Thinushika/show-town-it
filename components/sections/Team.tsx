@@ -119,20 +119,20 @@ const Team = () => {
               <p>{item.position}</p>
               <p>{item.desc}</p>
               <div className="d-flex flex-row">
-                <Link href={item.socialLink1}>
+                <Link className="social-icon-team me-2" href={item.socialLink1}>
                   <FaBehance />
                 </Link>
-                <Link href={item.socialLink2}>
+                <Link className="social-icon-team me-2" href={item.socialLink2}>
                   <FaFacebookF />
                 </Link>
-                <Link href={item.socialLink3}>
+                <Link className="social-icon-team me-2" href={item.socialLink3}>
                   <FaInstagram />
                 </Link>
               </div>
             </div>
           ))}
         </div>
-        <div className="d-flex flex-column flex-lg-row w-100 position-relative position-lg-absolute top-0 left-0">
+        <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0">
           {teamImages.map((item) => (
             <div
               key={item.id}
