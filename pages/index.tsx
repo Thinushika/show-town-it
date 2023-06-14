@@ -137,7 +137,7 @@ export default function Home() {
                   <div
                     className={`d-flex position-absolute hero-image-bg-image top-0 left-0 ${bgStyles}`}
                   >
-                    <Image src={item.path} alt='' width={992} height={992} className="img-fluid" />
+                    <Image src={item.path} alt='' width={1360} height={992} className="img-fluid" />
                   </div>
                   <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                   <div className="d-flex flex-column w-50 m-0 s-space hero py-5">

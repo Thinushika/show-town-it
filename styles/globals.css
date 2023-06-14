@@ -469,6 +469,17 @@ li {
   font-size: 12px;
   font-weight: 500;
 }
+
+.testimonials-styles h3{
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #5f5f5f;
+  font-weight: 700;
+}
+.testimonials-styles h2{
+  font-size: 32px;
+  font-weight: 700;
+}
 @media screen and (max-width: 600px){
   .left-right-space{
     padding-left: 20px !important;
