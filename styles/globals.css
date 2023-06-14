@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-body {}
 
 a {
   color: inherit;
@@ -345,9 +344,6 @@ li {
 .social-links:hover , .links-style:hover{
   color: #d90a2c;
 }
-.contact-form{
-
-}
 .contact-form label{
   font-size: 14px;
   font-weight: 400;
@@ -548,6 +544,10 @@ li {
   width: 60px;
   height: 2px;
   background-color: #fff;
+}
+
+.img-height{
+  height: 60vh !important
 }
 @media screen and (max-width: 600px){
   .left-right-space{

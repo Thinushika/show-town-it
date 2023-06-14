@@ -4,6 +4,7 @@ import MainSectionAbout from '@/components/mainSections/AboutUs'
 import ClientsLogo from '@/components/sections/ClientsLogo'
 import Process from '@/components/sections/Process'
 import Testimonials from '@/components/sections/Testimonials'
+import Team from '@/components/sections/Team'
 
 const aboutUs = () => {
   return (
@@ -11,6 +12,7 @@ const aboutUs = () => {
     <MainSectionAbout />
       {/* space */}
       <div className="space-section"></div>
+      <Team />
       <Testimonials />
       <ClientsLogo />
       <Process />
