@@ -51,6 +51,50 @@
   .mobileNavNinks{
     color: #161519 !important;
   }
+  
+
+  .nextHomeButton{
+    position: absolute;
+    z-index: 999999;
+    left: 93vw;
+    bottom: 6vh;
+    font-size: 30px !important;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 30px !important;
+    color: #161519;
+  }
+
+  .nextHomeButton:hover{
+    border: solid 2px #d90a2c !important;
+    /* color: #d90a2c !important; */
+    background-color: #fdfdfd7c;
+  }
+
+  .prevHomeButton{
+    position: absolute;
+    z-index: 99999;
+    left: 89vw;
+    bottom: 6vh;
+    font-size: 30px !important;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 30px !important;
+    color: #161519;
+  }
+
+  .prevHomeButton:hover{
+    border: solid 2px #d90a2c !important;
+    /* color: #d90a2c !important; */
+    background-color: #fdfdfd7c;
+  }
+
   @media screen and (max-width: 600px){
     .heroImageBg{
         background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');

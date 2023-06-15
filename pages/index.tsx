@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
 import {
@@ -25,6 +25,9 @@ import "swiper/css/mousewheel";
 
 import Image from "next/image";
 import { ThemeContext } from "@/components/theme/ThemeProvider";
+import { Swiper as SwiperCore } from 'swiper/types';
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+
 
 // theme styles
 import lightStyles from "@/styles//Light.module.css";
@@ -33,6 +36,7 @@ import darkStyles from "@/styles//Dark.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const swiperRef = useRef<SwiperCore>();
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
 
@@ -104,10 +108,18 @@ export default function Home() {
   const sliderStyles =
     theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
 
+    const prevHomeButton =
+    theme === "dark" ? darkStyles.prevHomeButton : lightStyles.prevHomeButton;
+    const nextHomeButton =
+    theme === "dark" ? darkStyles.nextHomeButton : lightStyles.nextHomeButton;
+
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
+        <button className={`${prevHomeButton}`} onClick={() => swiperRef.current?.slidePrev()}>
+        <BsArrowLeftShort />
+        </button>
         <Swiper
           id="homeSlider"
           modules={[
@@ -123,6 +135,9 @@ export default function Home() {
           effect="fade"
           speed={500}
           loop={true}
+          onBeforeInit={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           mousewheel
           // scrollbar={{ draggable: true,  }}
           pagination={{ clickable: true }}
@@ -200,7 +215,7 @@ export default function Home() {
                       />
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
-                    <div className="d-flex flex-column w-100 pe-5 s-space hero py-5">
+                    <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>
@@ -220,6 +235,9 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
+        <button className={`${nextHomeButton}`} onClick={() => swiperRef.current?.slideNext()}>
+        <BsArrowRightShort />
+        </button>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
           {slideContent.map((item, index) => (
             <div

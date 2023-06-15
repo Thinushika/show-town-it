@@ -265,7 +265,8 @@ li {
 
 
 #homeSlider .swiper-button-prev {
-  background-image: url("/imgs/prev-light-arrow.png") !important;
+  /* background-image: url("/imgs/prev-light-arrow.png") !important; */
+  /* background-image: url("/imgs/prev-light-arrow.png") !important; */
   background-position: center;
   background-size: cover;
   width: 40px !important;
@@ -273,7 +274,8 @@ li {
 }
 
 #homeSlider .swiper-button-next {
-  background-image: url("/imgs/next-light-arrow.png") !important;
+  /* background-image: url("/imgs/next-light-arrow.png") !important; */
+  /* background-image: url("/imgs/next-light-arrow.png") !important; */
   background-position: center;
   background-size: cover;
   width: 40px !important;
@@ -708,11 +710,13 @@ li {
   }
 
   #homeSlider .swiper-button-prev {
-    margin-left: 60vw !important;
+    margin-top: 37vh !important;
+    margin-left: 2vw !important;
   }
 
   #homeSlider .swiper-button-next {
-    margin-right: 10vw !important;
+    margin-top: 37vh !important;
+    margin-right: 70vw !important;
   }
 
   .height-75 {
