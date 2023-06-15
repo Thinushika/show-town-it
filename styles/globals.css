@@ -617,6 +617,10 @@ li {
 }
 
 
+.nav-item.active a, .nav-item.active span{
+  color: #d90a2c !important;
+}
+
 @media screen and (max-width: 600px) {
   #homeSlider .swiper-pagination {
     left: 90vw !important;

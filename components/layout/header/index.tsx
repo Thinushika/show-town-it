@@ -9,8 +9,11 @@ import { ThemeContext } from "@/components/theme/ThemeProvider";
 import lightStyles from "@/styles//Light.module.css";
 import darkStyles from "@/styles//Dark.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Header = () => {
+
+  const router = useRouter();
   const navItems = [
     {
       id: 1,
@@ -97,7 +100,9 @@ const Header = () => {
               {navItems.map((item) => (
                 <li
                   key={item.id}
-                  className="nav-item ps-2 pe-2 ps-lg-3 pe-lg-0 d-flex flex-column text-end"
+                  className={`nav-item ps-2 pe-2 ps-lg-3 pe-lg-0 d-flex flex-column justify-content-end align-items-end ${
+                    router.pathname === item.path ? 'active' : ''
+                  }`}
                 >
                   <span className={`${LinkStyle} numberStyle`}>
                     {item.number}
