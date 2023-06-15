@@ -19,7 +19,7 @@ const Sidebar = () => {
   return (
     <>
     <div
-      className="d-flex align-items-start h-100 position-absolute top-0 left-0"
+      className="d-flex align-items-start h-100 sticky-sidebar"
       style={{ zIndex: "99", width: "150px" }}
     >
       <div className="d-flex h-75 align-items-center">
