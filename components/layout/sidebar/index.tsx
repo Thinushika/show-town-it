@@ -20,7 +20,7 @@ const Sidebar = () => {
     <>
     <div
       className="d-flex align-items-start h-100 sticky-sidebar"
-      style={{ zIndex: "99", width: "150px" }}
+      style={{ zIndex: "99", width: "50px" }}
     >
       <div className="d-flex h-75 align-items-center">
       <button onClick={toggleTheme} className={`${containerStyles} ${styles.toggleButtonSize}`}>

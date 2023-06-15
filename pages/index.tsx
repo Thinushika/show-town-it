@@ -25,9 +25,12 @@ import "swiper/css/mousewheel";
 
 import Image from "next/image";
 import { ThemeContext } from "@/components/theme/ThemeProvider";
-import { Swiper as SwiperCore } from 'swiper/types';
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
-
+import { Swiper as SwiperCore } from "swiper/types";
+import {
+  BsArrowLeftShort,
+  BsArrowRightShort,
+  BsPlayCircle,
+} from "react-icons/bs";
 
 // theme styles
 import lightStyles from "@/styles//Light.module.css";
@@ -39,6 +42,38 @@ export default function Home() {
   const swiperRef = useRef<SwiperCore>();
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+
+  const { theme } = useContext(ThemeContext);
+  const buttonStyles =
+    theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
+  const bgStyles =
+    theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
+
+  const sliderStyles =
+    theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
+
+  const prevHomeButton =
+    theme === "dark" ? darkStyles.prevHomeButton : lightStyles.prevHomeButton;
+  const nextHomeButton =
+    theme === "dark" ? darkStyles.nextHomeButton : lightStyles.nextHomeButton;
+  const videoPlayBtn =
+    theme === "dark" ? darkStyles.videoPlayBtn : lightStyles.videoPlayBtn;
+    const waveEffect =
+    theme === "dark" ? darkStyles.waveEffect : lightStyles.waveEffect;
+
+
+
 
   useEffect(() => {
     console.log("Active : ", activeSlide);
@@ -97,28 +132,17 @@ export default function Home() {
     },
   ];
 
-  const next = "swiper-button-next";
-  const prev = "swiper-button-prev";
-  const { theme } = useContext(ThemeContext);
-  const buttonStyles =
-    theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
-  const bgStyles =
-    theme === "dark" ? darkStyles.heroImageBg : lightStyles.heroImageBg;
 
-  const sliderStyles =
-    theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
-
-    const prevHomeButton =
-    theme === "dark" ? darkStyles.prevHomeButton : lightStyles.prevHomeButton;
-    const nextHomeButton =
-    theme === "dark" ? darkStyles.nextHomeButton : lightStyles.nextHomeButton;
 
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
-        <button className={`${prevHomeButton}`} onClick={() => swiperRef.current?.slidePrev()}>
-        <BsArrowLeftShort />
+        <button
+          className={`${prevHomeButton}`}
+          onClick={() => swiperRef.current?.slidePrev()}
+        >
+          <BsArrowLeftShort />
         </button>
         <Swiper
           id="homeSlider"
@@ -174,6 +198,10 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 w-lg-50 m-0 s-space hero py-5">
+                      <BsPlayCircle className={`${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                       />
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>
@@ -216,6 +244,10 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
+                    <BsPlayCircle className={`${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                       />
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>
@@ -235,8 +267,11 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${nextHomeButton}`} onClick={() => swiperRef.current?.slideNext()}>
-        <BsArrowRightShort />
+        <button
+          className={`${nextHomeButton}`}
+          onClick={() => swiperRef.current?.slideNext()}
+        >
+          <BsArrowRightShort />
         </button>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">
           {slideContent.map((item, index) => (

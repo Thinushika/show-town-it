@@ -1,102 +1,130 @@
 .container {
-    background-color: #fff;
-    color: #161519;
+  background-color: #fff;
+  color: #161519;
 }
 
 .themeToggleButton {
-    background-color: #fff;
-    color: #161519;
+  background-color: #fff;
+  color: #161519;
 }
 
 .talkButton {
-    background-color: #d90a2c;
-    transition: background-color 0.5s ease, color 0.5s ease;
+  background-color: #d90a2c;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.txtColor{
-    color:#161519
+.txtColor {
+  color: #161519
 }
-.heroButton{
-    color: #161519 !important;
+
+.heroButton {
+  color: #161519 !important;
 }
-.heroImageBg{
-    background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
+
+.heroImageBg {
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
 }
 
 .swiper-button-prev {
-    background-image: url("/imgs/prev-dark-arrow.png") !important;
-    background-position: center;
-    background-size: cover;
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
-  .swiper-button-next {
-    background-image: url("/imgs/next-dark-arrow.png") !important;
-    background-position: center;
-    background-size: cover;
-    width: 40px !important;
-    height: 40px !important;
+  background-image: url("/imgs/prev-dark-arrow.png") !important;
+  background-position: center;
+  background-size: cover;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.swiper-button-next {
+  background-image: url("/imgs/next-dark-arrow.png") !important;
+  background-position: center;
+  background-size: cover;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.sliderbg {
+  background-color: #ffffff;
+}
+
+.closeNavMobileColor {
+  color: #000;
+}
+
+.navbarDrawerColor {
+  background-color: #fff !important;
+}
+
+.mobileNavNinks {
+  color: #161519 !important;
+}
+
+
+.nextHomeButton {
+  position: absolute;
+  z-index: 999999;
+  left: 93vw;
+  bottom: 6vh;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 30px !important;
+  color: #161519;
+}
+
+.nextHomeButton:hover {
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #fdfdfd7c;
+}
+
+.prevHomeButton {
+  position: absolute;
+  z-index: 99999;
+  left: 89vw;
+  bottom: 6vh;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 30px !important;
+  color: #161519;
+}
+
+.prevHomeButton:hover {
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #fdfdfd7c;
+}
+
+.videoPlayBtn{
+  font-size: 50px !important;
+  margin-bottom: 20px;
+  cursor: pointer !important;
+  transition: color 0.5s ease;
+}
+.videoPlayBtn:hover{
+  color: #d90a2c !important;
+}
+
+
+@media screen and (max-width: 992px) {
+  .heroImageBg {
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
   }
 
-  .sliderbg{
-    background-color: #ffffff;
-  }
-  .closeNavMobileColor{
-    color: #000;
-  }
-  .navbarDrawerColor{
-    background-color: #fff !important;
-  }
-  .mobileNavNinks{
-    color: #161519 !important;
-  }
-  
-
-  .nextHomeButton{
-    position: absolute;
-    z-index: 999999;
-    left: 93vw;
-    bottom: 6vh;
-    font-size: 30px !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 30px !important;
-    color: #161519;
+  .nextHomeButton {
+    left: 16vw;
+    bottom: 5vh;
   }
 
-  .nextHomeButton:hover{
-    border: solid 2px #d90a2c !important;
-    /* color: #d90a2c !important; */
-    background-color: #fdfdfd7c;
+
+  .prevHomeButton {
+    left: 4vw;
+    bottom: 5vh;
   }
 
-  .prevHomeButton{
-    position: absolute;
-    z-index: 99999;
-    left: 89vw;
-    bottom: 6vh;
-    font-size: 30px !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 30px !important;
-    color: #161519;
-  }
-
-  .prevHomeButton:hover{
-    border: solid 2px #d90a2c !important;
-    /* color: #d90a2c !important; */
-    background-color: #fdfdfd7c;
-  }
-
-  @media screen and (max-width: 600px){
-    .heroImageBg{
-        background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
-    }
-  }
+}

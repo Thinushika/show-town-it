@@ -104,53 +104,31 @@
 }
 
 
+.videoPlayBtn{
+  font-size: 50px !important;
+  margin-bottom: 20px;
+  cursor: pointer !important;
+  transition: color 0.5s ease;
+}
+.videoPlayBtn:hover{
+  color: #d90a2c !important;
+}
 
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-width: 992px) {
   .heroImageBg {
     background: linear-gradient(to top, rgb(20, 20, 20) 50%, rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
   }
 
   .nextHomeButton {
-    position: absolute;
-    z-index: 999999;
     left: 16vw;
-    bottom: 8vh;
-    font-size: 30px !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 30px !important;
-    color: #fff;
-  }
-
-  .nextHomeButton:hover {
-    border: solid 2px #d90a2c !important;
-    /* color: #d90a2c !important; */
-    background-color: #1313137c;
+    bottom: 5vh;
   }
 
   .prevHomeButton {
-    position: absolute;
-    z-index: 99999;
     left: 4vw;
-    bottom: 8vh;
-    font-size: 30px !important;
-    background-color: transparent;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    line-height: 30px !important;
-    color: #fff;
-  }
-
-  .prevHomeButton:hover {
-    border: solid 2px #d90a2c !important;
-    /* color: #d90a2c !important; */
-    background-color: #1313137c;
+    bottom: 5vh;
   }
 
 }

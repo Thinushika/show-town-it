@@ -174,6 +174,7 @@ li {
   height: 250px;
   background-color: transparent;
   z-index: 7;
+  pointer-events: none !important;
 }
 
 .dot-pattern::before {
@@ -597,8 +598,9 @@ li {
 .height-75 {
   height: 70vh !important;
 }
-.social-icon-team{
-  border: solid 1px #707070; 
+
+.social-icon-team {
+  border: solid 1px #707070;
   padding: 10px;
   border-radius: 50%;
   width: 50px;
@@ -610,7 +612,7 @@ li {
 }
 
 
-.sticky-sidebar{
+.sticky-sidebar {
   position: fixed !important;
   left: 0;
   top: 50%;
@@ -618,7 +620,7 @@ li {
   z-index: 9999999;
 }
 
-.sticky-sidebar-mobile{
+.sticky-sidebar-mobile {
   position: fixed !important;
   right: 0;
   top: 50%;
@@ -626,17 +628,18 @@ li {
 }
 
 
-.nav-item.active a, .nav-item.active span{
+.nav-item.active a,
+.nav-item.active span {
   color: #d90a2c !important;
 }
 
 
 
 /* mobile navbar */
-.mobileNav{
-}
-.navbarDrawer{
-  
+.mobileNav {}
+
+.navbarDrawer {
+
   height: 100vh;
   width: 90vw;
   position: absolute;
@@ -647,11 +650,11 @@ li {
   animation-timing-function: ease;  */
 }
 
-.closeNavMobile{
+.closeNavMobile {
   background-color: transparent !important;
   border: none !important;
   font-size: 30px;
-  
+
 }
 
 /* @keyframes slideIn {
@@ -680,7 +683,29 @@ li {
   animation-name: slideOut;
 } */
 
-@media screen and (max-width: 600px) {
+
+@keyframes waving {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+  }
+}
+
+.waveEffect {
+  animation: ring  1s infinite;
+}
+
+.hoverEffect {
+  animation-play-state: paused;
+}
+
+@media screen and (max-width: 992px) {
   #homeSlider .swiper-pagination {
     left: 90vw !important;
     width: 10vw !important;
@@ -710,12 +735,12 @@ li {
   }
 
   #homeSlider .swiper-button-prev {
-    margin-top: 37vh !important;
+    margin-top: 40vh !important;
     margin-left: 2vw !important;
   }
 
   #homeSlider .swiper-button-next {
-    margin-top: 37vh !important;
+    margin-top: 40vh !important;
     margin-right: 70vw !important;
   }
 
@@ -726,14 +751,16 @@ li {
   .hero-image-bg {
     width: 100% !important;
   }
-  
+
   .hero-image-bg-image {
     width: 100% !important;
   }
-  .hero h2{
+
+  .hero h2 {
     font-size: 40px;
   }
-  .img-height{
+
+  .img-height {
     height: auto !important;
   }
 }
