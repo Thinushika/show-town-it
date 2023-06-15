@@ -616,6 +616,13 @@ li {
   z-index: 9999999;
 }
 
+.sticky-sidebar-mobile{
+  position: fixed !important;
+  right: 0;
+  top: 50%;
+  z-index: 9999999;
+}
+
 
 .nav-item.active a, .nav-item.active span{
   color: #d90a2c !important;
