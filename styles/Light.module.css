@@ -42,7 +42,15 @@
   .sliderbg{
     background-color: #ffffff;
   }
-
+  .closeNavMobileColor{
+    color: #000;
+  }
+  .navbarDrawerColor{
+    background-color: #fff !important;
+  }
+  .mobileNavNinks{
+    color: #161519 !important;
+  }
   @media screen and (max-width: 600px){
     .heroImageBg{
         background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
