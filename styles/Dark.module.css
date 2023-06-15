@@ -1,65 +1,121 @@
 .container {
-    background-color: #161519;
-    color: #fff;
+  background-color: #161519;
+  color: #fff;
 }
 
 .themeToggleButton {
-    background-color: #070707c9;
-    color: #fff;
+  background-color: #070707c9;
+  color: #fff;
 }
 
 .talkButton {
-    background-color: #3d3d3da1;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-.talkButton:hover {
-    background-color: #d90a2c;
+  background-color: #3d3d3da1;
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.txtColor{
-    color:#fff
+.talkButton:hover {
+  background-color: #d90a2c;
 }
-.heroButton{
-    color: #fff;
+
+.txtColor {
+  color: #fff
 }
-.heroImageBg{
-    background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
+
+.heroButton {
+  color: #fff;
+}
+
+.heroImageBg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
 }
 
 .swiper-button-prev {
-    background-image: url("/imgs/prev-light-arrow.png") !important;
-    background-position: center;
-    background-size: cover;
-    width: 40px !important;
-    height: 40px !important;
-  }
-  
-  .swiper-button-next {
-    background-image: url("/imgs/next-light-arrow.png") !important;
-    background-position: center;
-    background-size: cover;
-    width: 40px !important;
-    height: 40px !important;
+  background-image: url("/imgs/prev-light-arrow.png") !important;
+  background-position: center;
+  background-size: cover;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.swiper-button-next {
+  background-image: url("/imgs/next-light-arrow.png") !important;
+  background-position: center;
+  background-size: cover;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.sliderbg {
+  background-color: #161519;
+}
+
+.closeNavMobileColor {
+  color: #fff;
+}
+
+.navbarDrawerColor {
+  background-color: #131313;
+}
+
+.mobileNavNinks {
+  color: #acacac !important;
+}
+
+.nextHomeButton {
+  position: absolute;
+  z-index: 999999;
+  left: 93vw;
+  bottom: 6vh;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 30px !important;
+  color: #fff;
+}
+
+.nextHomeButton:hover {
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #1313137c;
+}
+
+.prevHomeButton {
+  position: absolute;
+  z-index: 99999;
+  left: 89vw;
+  bottom: 6vh;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 30px !important;
+  color: #fff;
+}
+
+.prevHomeButton:hover {
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #1313137c;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+  .heroImageBg {
+    background: linear-gradient(to top, rgb(20, 20, 20) 50%, rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
   }
 
-  .sliderbg{
-    background-color: #161519;
-  }
-
-  .closeNavMobileColor{
-    color: #fff;
-  }
-  .navbarDrawerColor{
-    background-color: #131313;
-  }
-  .mobileNavNinks{
-    color: #acacac !important;
-  }
-  .nextHomeButton{
+  .nextHomeButton {
     position: absolute;
     z-index: 999999;
-    left: 93vw;
-    bottom: 6vh;
+    left: 16vw;
+    bottom: 8vh;
     font-size: 30px !important;
     background-color: transparent;
     border: none;
@@ -70,17 +126,17 @@
     color: #fff;
   }
 
-  .nextHomeButton:hover{
+  .nextHomeButton:hover {
     border: solid 2px #d90a2c !important;
     /* color: #d90a2c !important; */
     background-color: #1313137c;
   }
 
-  .prevHomeButton{
+  .prevHomeButton {
     position: absolute;
     z-index: 99999;
-    left: 89vw;
-    bottom: 6vh;
+    left: 4vw;
+    bottom: 8vh;
     font-size: 30px !important;
     background-color: transparent;
     border: none;
@@ -91,17 +147,10 @@
     color: #fff;
   }
 
-  .prevHomeButton:hover{
+  .prevHomeButton:hover {
     border: solid 2px #d90a2c !important;
     /* color: #d90a2c !important; */
     background-color: #1313137c;
   }
 
-
-
-
-  @media screen and (max-width: 600px){
-    .heroImageBg{
-        background: linear-gradient(to top, rgb(20, 20, 20) 50%, rgba(0, 0, 0, 0) ), url('/imgs/hero-img-bg.jpeg');
 }
-  }
