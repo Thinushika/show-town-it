@@ -100,7 +100,7 @@ li {
 }
 
 .hero h2 {
-  font-size: 50px;
+  font-size: 63px;
   font-weight: 700;
 }
 
@@ -657,31 +657,7 @@ li {
 
 }
 
-/* @keyframes slideIn {
-  0% {
-    left: -100%;
-  }
-  100% {
-    left: 0;
-  }
-}
 
-@keyframes slideOut {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -100%;
-  }
-}
-
-.drawerOpen {
-  animation-name: slideIn;
-}
-
-.drawerClosed {
-  animation-name: slideOut;
-} */
 
 
 @keyframes waving {
@@ -693,7 +669,7 @@ li {
   100% {
     transform: scale(2);
     opacity: 0;
-    box-shadow: 0 0 0 50px rgba(255, 255, 255, 0);
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
   }
 }
 
@@ -703,6 +679,23 @@ li {
 
 .hoverEffect {
   animation-play-state: paused;
+}
+
+
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 1.5s fadeInUp;
 }
 
 @media screen and (max-width: 992px) {

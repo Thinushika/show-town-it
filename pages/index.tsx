@@ -53,7 +53,6 @@ export default function Home() {
     setIsHovered(false);
   };
 
-
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
     theme === "dark" ? darkStyles.heroButton : lightStyles.heroButton;
@@ -69,11 +68,8 @@ export default function Home() {
     theme === "dark" ? darkStyles.nextHomeButton : lightStyles.nextHomeButton;
   const videoPlayBtn =
     theme === "dark" ? darkStyles.videoPlayBtn : lightStyles.videoPlayBtn;
-    const waveEffect =
+  const waveEffect =
     theme === "dark" ? darkStyles.waveEffect : lightStyles.waveEffect;
-
-
-
 
   useEffect(() => {
     console.log("Active : ", activeSlide);
@@ -87,7 +83,7 @@ export default function Home() {
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "JBQ Crafting Official Collab",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      desc: "Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs. We guarantee the effectiveness of...",
       link: "/",
     },
     {
@@ -97,7 +93,7 @@ export default function Home() {
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "Diseño Ave K3 Business Center.",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      desc: "Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs. We guarantee the effectiveness of...",
       link: "/",
     },
     {
@@ -107,7 +103,7 @@ export default function Home() {
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      desc: "Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs. We guarantee the effectiveness of...",
       link: "/",
     },
     {
@@ -117,7 +113,7 @@ export default function Home() {
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      desc: "Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs. We guarantee the effectiveness of...",
       link: "/",
     },
     {
@@ -127,12 +123,10 @@ export default function Home() {
       dateTitlePart1: "Strategy, UI/UX",
       dateTitlePart2: "June 23, 2023",
       title: "WRE 22 CrossFit World’s Relays.",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut neque malesuada, vehicula orci a, viverra risus. Suspendisse vitae odio pretium, pellentesque enim et, gravida lorem.",
+      desc: "Crafting new bright brands, unique visual systems and digital experience focused on a wide range of original collabs. We guarantee the effectiveness of...",
       link: "/",
     },
   ];
-
-
 
   return (
     <>
@@ -177,7 +171,7 @@ export default function Home() {
               <div
                 className={`w-100 h-100 d-none d-lg-flex justify-content-center align-items-center ${sliderStyles}`}
               >
-                <div className="d-flex justify-content-center align-items-center height-75">
+                <div className="d-flex justify-content-center align-items-center height-75 w-100">
                   <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
                     <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
                       {item.title}
@@ -197,23 +191,36 @@ export default function Home() {
                       />
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
-                    <div className="d-flex flex-column w-100 w-lg-50 m-0 s-space hero py-5">
-                      <BsPlayCircle className={`${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                       />
-                      <p>
-                        {item.dateTitlePart1}
-                        <span className="red-font">.</span>
-                        {item.dateTitlePart2}
-                      </p>
-                      <h2>{item.title}</h2>
-                      <p className="">{item.desc}</p>
-                      <Link href={"/"}>
-                        <button className={`${buttonStyles} px-2 py-2`}>
-                          Show Project <BsArrowRight className="ms-2" />{" "}
-                        </button>
-                      </Link>
+                    <div className="d-flex flex-column w-100 w-lg-50 h-100 justify-content-center justify-content-lg-end m-0 s-space hero py-4">
+                      <div data-aos="fade-up" data-aos-duration="1500">
+                        <BsPlayCircle
+                          className={`${videoPlayBtn} ${
+                            isHovered ? "hoverEffect" : "waveEffect"
+                          }`}
+                          onMouseEnter={handleMouseEnter}
+                          onMouseLeave={handleMouseLeave}
+                        />
+                      </div>
+                      <div data-aos="fade-up" data-aos-duration="1600">
+                        <p>
+                          {item.dateTitlePart1}
+                          <span className="red-font">.</span>
+                          {item.dateTitlePart2}
+                        </p>
+                      </div>
+                      <div data-aos="fade-up" data-aos-duration="1700">
+                        <h2 className="w-50 pe-5">{item.title}</h2>
+                      </div>
+                      <div data-aos="fade-up" data-aos-duration="1800">
+                        <p className="w-50">{item.desc}</p>
+                      </div>
+                      <div data-aos="fade-up" data-aos-duration="1900">
+                        <Link href={"/"}>
+                          <button className={`${buttonStyles} px-2 py-2`}>
+                            Show Project <BsArrowRight className="ms-2" />{" "}
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -244,10 +251,13 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
-                    <BsPlayCircle className={`${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
-                      onMouseEnter={handleMouseEnter}
-                      onMouseLeave={handleMouseLeave}
-                       />
+                      <BsPlayCircle
+                        className={`${videoPlayBtn} ${
+                          isHovered ? "hoverEffect" : "waveEffect"
+                        }`}
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      />
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>

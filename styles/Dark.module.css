@@ -74,10 +74,12 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
+  transition: border-color 0.3s ease;
 }
 
 .nextHomeButton:hover {
   border: solid 2px #d90a2c !important;
+  border-color: #d90a2c !important;
   /* color: #d90a2c !important; */
   background-color: #1313137c;
 }
@@ -95,10 +97,12 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
+  transition: border-color 0.3s ease;
 }
 
 .prevHomeButton:hover {
-  border: solid 2px #d90a2c !important;
+  border: solid 2px  !important;
+  border-color: #d90a2c !important;
   /* color: #d90a2c !important; */
   background-color: #1313137c;
 }
@@ -108,7 +112,8 @@
   font-size: 50px !important;
   margin-bottom: 20px;
   cursor: pointer !important;
-  transition: color 0.5s ease;
+  /* transition: color 0.5s ease; */
+  transition: all cubic-bezier(.645, .045, .355, 1) .35s;
 }
 .videoPlayBtn:hover{
   color: #d90a2c !important;
