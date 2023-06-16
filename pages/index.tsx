@@ -39,7 +39,6 @@ import darkStyles from "@/styles//Dark.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const swiperRef = useRef<SwiperCore>();
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
 
@@ -52,6 +51,7 @@ export default function Home() {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+
 
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
@@ -68,8 +68,11 @@ export default function Home() {
     theme === "dark" ? darkStyles.nextHomeButton : lightStyles.nextHomeButton;
   const videoPlayBtn =
     theme === "dark" ? darkStyles.videoPlayBtn : lightStyles.videoPlayBtn;
-  const waveEffect =
+    const waveEffect =
     theme === "dark" ? darkStyles.waveEffect : lightStyles.waveEffect;
+
+
+
 
   useEffect(() => {
     console.log("Active : ", activeSlide);
@@ -128,13 +131,14 @@ export default function Home() {
     },
   ];
 
+
+
   return (
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
         <button
           className={`${prevHomeButton}`}
-          onClick={() => swiperRef.current?.slidePrev()}
         >
           <BsArrowLeftShort />
         </button>
@@ -153,11 +157,7 @@ export default function Home() {
           effect="fade"
           speed={500}
           loop={true}
-          onBeforeInit={(swiper) => {
-            swiperRef.current = swiper;
-          }}
           mousewheel
-          // scrollbar={{ draggable: true,  }}
           pagination={{ clickable: true }}
           navigation={true}
           onSwiper={(swiper) => console.log(swiper)}
@@ -191,36 +191,23 @@ export default function Home() {
                       />
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
-                    <div className="d-flex flex-column w-100 w-lg-50 h-100 justify-content-center justify-content-lg-end m-0 s-space hero py-4">
-                      <div data-aos="fade-up" data-aos-duration="1500">
-                        <BsPlayCircle
-                          className={`${videoPlayBtn} ${
-                            isHovered ? "hoverEffect" : "waveEffect"
-                          }`}
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
-                        />
-                      </div>
-                      <div data-aos="fade-up" data-aos-duration="1600">
-                        <p>
-                          {item.dateTitlePart1}
-                          <span className="red-font">.</span>
-                          {item.dateTitlePart2}
-                        </p>
-                      </div>
-                      <div data-aos="fade-up" data-aos-duration="1700">
-                        <h2 className="w-50 pe-5">{item.title}</h2>
-                      </div>
-                      <div data-aos="fade-up" data-aos-duration="1800">
-                        <p className="w-50">{item.desc}</p>
-                      </div>
-                      <div data-aos="fade-up" data-aos-duration="1900">
-                        <Link href={"/"}>
-                          <button className={`${buttonStyles} px-2 py-2`}>
-                            Show Project <BsArrowRight className="ms-2" />{" "}
-                          </button>
-                        </Link>
-                      </div>
+                    <div className="d-flex flex-column w-100 w-lg-50 h-100 justify-content-center justify-content-lg-end m-0 s-space hero py-5">
+                      <BsPlayCircle className={`fadeInUp-animation ${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                       />
+                      <p className="fadeInUp-animation">
+                        {item.dateTitlePart1}
+                        <span className="red-font">.</span>
+                        {item.dateTitlePart2}
+                      </p>
+                      <h2 className="w-50 pe-5 fadeInUp-animation">{item.title}</h2>
+                      <p className="w-50 fadeInUp-animation">{item.desc}</p>
+                      <Link href={"/"}>
+                        <button className={`${buttonStyles} px-2 py-2 fadeInUp-animation`}>
+                          Show Project <BsArrowRight className="ms-2" />{" "}
+                        </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -251,13 +238,10 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
-                      <BsPlayCircle
-                        className={`${videoPlayBtn} ${
-                          isHovered ? "hoverEffect" : "waveEffect"
-                        }`}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      />
+                    <BsPlayCircle className={`${videoPlayBtn} ${isHovered ? 'hoverEffect' : 'waveEffect'}`}
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
+                       />
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>
@@ -279,7 +263,6 @@ export default function Home() {
         </Swiper>
         <button
           className={`${nextHomeButton}`}
-          onClick={() => swiperRef.current?.slideNext()}
         >
           <BsArrowRightShort />
         </button>

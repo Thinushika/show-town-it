@@ -22,7 +22,7 @@
 }
 
 .heroImageBg {
-  background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
+  background: linear-gradient(to right, rgb(255, 255, 255), rgba(0, 0, 0, 0));
 }
 
 .swiper-button-prev {
@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 992px) {
   .heroImageBg {
-    background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0)), url('/imgs/hero-img-bg.jpeg');
+    background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0));
   }
 
   .nextHomeButton {

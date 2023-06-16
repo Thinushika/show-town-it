@@ -15,7 +15,7 @@ const contactUs = () => {
           <div className="col-12 col-lg-6">
             <h3 className="mb-4 mb-lg-3">Get in touch</h3>
             <div className="d-flex flex-column flex-lg-row row row-cols-1 row-cols-sm-2">
-              <div className="col mb-3 mb-lg-0" data-aos="fade-up" data-aos-duration="3000">
+              <div className="col mb-3 mb-lg-0" >
                 <p className="mb-1">Work Inquires</p>
                 <p>
                   <b>+1.809.120.6705</b>
