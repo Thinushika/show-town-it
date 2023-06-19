@@ -35,6 +35,7 @@ body {
   position: absolute;
   pointer-events: none;
   animation-delay: 0.9s !important;
+  z-index: 9999999999;
 }
 .cursor::after {
   content: "";
@@ -47,6 +48,7 @@ body {
   top: -12px;
   left: -12px;
   animation-delay: 0.9s !important;
+  z-index: 9999999999;
 }
 
 @keyframes cursorAnim {
