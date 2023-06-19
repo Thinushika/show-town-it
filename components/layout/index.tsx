@@ -20,29 +20,6 @@ const Layout = ({ children }: LayoutProps) => {
   const containerStyles =
     theme === "dark" ? darkStyles.container : lightStyles.container;
 
-  // useEffect(() => {
-  //   const cursor = document.querySelector(".cursor");
-  //   document.addEventListener("mousemove", (e) => {
-  //     let leftPosition = e.pageX;
-  //     let topPosition = e.pageY;
-
-  //     cursor.style.left = leftPosition + "px";
-  //     cursor.style.top = topPosition + "px";
-  //   });
-  // }, []);
-
-  // useEffect(() => {
-  //   const cursor = document.querySelector(".cursor") as HTMLElement | null;
-  //   if (!cursor) return;
-  
-  //   document.addEventListener("mousemove", (e) => {
-  //     let leftPosition = e.pageX;
-  //     let topPosition = e.pageY;
-  
-  //     cursor.style.left = leftPosition + "px";
-  //     cursor.style.top = topPosition + "px";
-  //   });
-  // }, []);
   
 
   return (
@@ -56,9 +33,11 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
 
       <div className="d-none d-lg-block ">
+      <CustomCursor />
         <Sidebar />
       </div>
       <div className="d-block d-lg-none">
+      <CustomCursor />
         <MobileSidebar />
       </div>
       <main
@@ -68,7 +47,6 @@ const Layout = ({ children }: LayoutProps) => {
         <CustomCursor />
         {children}
       </main>
-      <div className="cursor"></div>
     </>
   );
 };

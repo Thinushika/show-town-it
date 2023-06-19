@@ -140,7 +140,7 @@ const Team = () => {
             </div>
           ))}
         </div>
-        <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0">
+        <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0" >
           {hoveredImage === "1" && (
             <div
               className={`col-12 col-lg-3 column-display justify-content-center align-items-center text-center`}

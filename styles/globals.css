@@ -36,6 +36,15 @@ body {
   pointer-events: none;
 }
 
+button:hover .cursor {
+  width: 12px;
+  height: 12px;
+}
+
+button:hover .cursor::after {
+  width: 8px;
+  height: 8px;
+}
 .cursor::after {
   content: "";
   width: 30px;
