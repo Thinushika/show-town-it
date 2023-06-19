@@ -191,6 +191,10 @@
   background-color: #fff;
 }
 
+.lightTextColor{
+  color: #20202062;
+}
+
 @media screen and (max-width: 992px) {
   .heroImageBg {
     background: linear-gradient(to top, rgb(20, 20, 20) 50%, rgba(0, 0, 0, 0));

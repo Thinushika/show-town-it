@@ -60,6 +60,8 @@ export default function Home() {
     theme === "dark" ? darkStyles.videoPlayBtn : lightStyles.videoPlayBtn;
   const waveEffect =
     theme === "dark" ? darkStyles.waveEffect : lightStyles.waveEffect;
+    const lightTextColor =
+    theme === "dark" ? darkStyles.lightTextColor : lightStyles.lightTextColor;
 
   useEffect(() => {
     console.log("Active : ", activeSlide);
@@ -156,7 +158,7 @@ export default function Home() {
               >
                 <div className="d-flex justify-content-center align-items-center height-75 w-100">
                   <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
-                    <div className="d-flex position-absolute hero-image-bg-text top-0 left-0 text-center">
+                    <div className={`${lightTextColor} d-flex position-absolute hero-image-bg-text top-0 left-0 text-center`}>
                       {item.title}
                     </div>
                     <div

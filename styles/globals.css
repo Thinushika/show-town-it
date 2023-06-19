@@ -161,7 +161,6 @@ li {
   width: 100vw;
   height: 300px;
   background-color: transparent;
-  color: #1d1d1d52;
   z-index: 2;
   font-size: 180px;
   font-weight: 800;
@@ -636,7 +635,7 @@ li {
 
 
 /* mobile navbar */
-.mobileNav {}
+
 
 .navbarDrawer {
 
