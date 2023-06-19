@@ -36,21 +36,12 @@ import {
 import lightStyles from "@/styles//Light.module.css";
 import darkStyles from "@/styles//Dark.module.css";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   const { theme } = useContext(ThemeContext);
   const buttonStyles =
@@ -187,11 +178,7 @@ export default function Home() {
                       <div className="d-flex container-ring-icon postition-relative mb-3">
                         <div className="circle position-absolute"></div>
                         <BsPlayCircle
-                          className={`mb-0 fadeInUp-animation  ${videoPlayBtn} ${
-                            isHovered ? "hoverEffect" : "waveEffect"
-                          }`}
-                          onMouseEnter={handleMouseEnter}
-                          onMouseLeave={handleMouseLeave}
+                          className={`mb-0 fadeInUp-animation  ${videoPlayBtn}`}
                         />
                       </div>
                       <p className="fadeInUp-animation">
@@ -205,9 +192,10 @@ export default function Home() {
                       <p className="w-50 fadeInUp-animation">{item.desc}</p>
                       <Link href={"/"}>
                         <button
-                          className={`${buttonStyles} px-2 py-2 fadeInUp-animation`}
+                          className={`${buttonStyles}  px-2 py-2 fadeInUp-animation`}
                         >
-                          Show Project <BsArrowRight className="ms-2" />{" "}
+                          Show Project
+                            <BsArrowRight className="arrow ms-2" />
                         </button>
                       </Link>
                     </div>
@@ -240,13 +228,12 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
-                      <BsPlayCircle
-                        className={`${videoPlayBtn} ${
-                          isHovered ? "hoverEffect" : "waveEffect"
-                        }`}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                      />
+                    <div className="d-flex container-ring-icon postition-relative mb-3">
+                        <div className="circle position-absolute"></div>
+                        <BsPlayCircle
+                          className={`mb-0 fadeInUp-animation  ${videoPlayBtn}`}
+                        />
+                      </div>
                       <p>
                         {item.dateTitlePart1}
                         <span className="red-font">.</span>

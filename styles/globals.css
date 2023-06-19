@@ -813,3 +813,27 @@ li {
     transform: scale(1.5);
   }
 }
+
+
+
+
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  transform: translate(0, 0%);
+  transition: right 1s linear;
+}
+
+.arrow:hover {
+  right: -50% !important;
+}
+
+@keyframes slideRight {
+  0% {
+    right: -50px !important;
+  }
+  100% {
+    right: 100% !important;
+  }
+}
