@@ -9,6 +9,7 @@ import lightStyles from "@/styles//Light.module.css";
 import darkStyles from "@/styles//Dark.module.css";
 import Head from "next/head";
 import MobileSidebar from "./sidebar/MobileSidebar";
+import CustomCursor from "../Cursor";
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,7 +20,30 @@ const Layout = ({ children }: LayoutProps) => {
   const containerStyles =
     theme === "dark" ? darkStyles.container : lightStyles.container;
 
+  // useEffect(() => {
+  //   const cursor = document.querySelector(".cursor");
+  //   document.addEventListener("mousemove", (e) => {
+  //     let leftPosition = e.pageX;
+  //     let topPosition = e.pageY;
 
+  //     cursor.style.left = leftPosition + "px";
+  //     cursor.style.top = topPosition + "px";
+  //   });
+  // }, []);
+
+  // useEffect(() => {
+  //   const cursor = document.querySelector(".cursor") as HTMLElement | null;
+  //   if (!cursor) return;
+  
+  //   document.addEventListener("mousemove", (e) => {
+  //     let leftPosition = e.pageX;
+  //     let topPosition = e.pageY;
+  
+  //     cursor.style.left = leftPosition + "px";
+  //     cursor.style.top = topPosition + "px";
+  //   });
+  // }, []);
+  
 
   return (
     <>
@@ -30,7 +54,7 @@ const Layout = ({ children }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      
+
       <div className="d-none d-lg-block ">
         <Sidebar />
       </div>
@@ -41,8 +65,10 @@ const Layout = ({ children }: LayoutProps) => {
         className={`${containerStyles} ${styles.container_fullpage}  d-flex flex-column justify-content-center align-items-center position-relative`}
         style={{ zIndex: "9" }}
       >
+        <CustomCursor />
         {children}
       </main>
+      <div className="cursor"></div>
     </>
   );
 };
