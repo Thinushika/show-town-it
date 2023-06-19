@@ -193,7 +193,9 @@
 .slidelineColor{
   background-color: #161519;
 }
-
+.productColColor{
+  background-color: #d4d4d438;
+}
 @media screen and (max-width: 992px) {
   .heroImageBg {
     background: linear-gradient(to top, rgb(255, 255, 255), rgba(0, 0, 0, 0));

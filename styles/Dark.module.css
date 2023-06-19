@@ -194,7 +194,9 @@
 .lightTextColor{
   color: #20202062;
 }
-
+.productColColor{
+  background-color: #33333338;
+}
 @media screen and (max-width: 992px) {
   .heroImageBg {
     background: linear-gradient(to top, rgb(20, 20, 20) 50%, rgba(0, 0, 0, 0));

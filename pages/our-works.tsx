@@ -1,10 +1,18 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-no-undef */
 import Footer from "@/components/layout/footer";
-import React from "react";
+import React, { useContext } from "react";
 import MainSectionOurWorks from "@/components/mainSections/OurWorks";
 import Image from "next/image";
+import { ThemeContext } from "@/components/theme/ThemeProvider";
+// theme styles
+import lightStyles from "@/styles//Light.module.css";
+import darkStyles from "@/styles//Dark.module.css";
 
 const ourWorks = () => {
+  const { theme } = useContext(ThemeContext);
+  const productColColor =
+    theme === "dark" ? darkStyles.productColColor : lightStyles.productColColor;
 
   const productsData = [
     {
@@ -61,7 +69,7 @@ const ourWorks = () => {
         {
           productsData.map((item)=>(
             <div key={item.id} className="col  p-2 ">
-          <div className="d-flex flex-column product-col ">
+          <div className={`d-flex flex-column product-col ${productColColor}`}>
             <Image
               src={item.path}
               alt=""
