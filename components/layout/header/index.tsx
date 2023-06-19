@@ -11,6 +11,8 @@ import darkStyles from "@/styles//Dark.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
+import { HiBars3BottomLeft } from "react-icons/hi2";
+
 import { MdOutlineClose } from "react-icons/md";
 
 const Header = () => {
@@ -95,7 +97,8 @@ const Header = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <HiBars3BottomLeft />
+            {/* <span className="navbar-toggler-icon"></span> */}
           </button>
 
           <Link href="/" className="navbar-brand">

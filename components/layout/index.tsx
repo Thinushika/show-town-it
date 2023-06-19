@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-document-import-in-page */
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect } from "react";
 import Header from "./header";
 import Sidebar from "./sidebar";
 import styles from "@/styles/Home.module.css";
@@ -18,6 +18,9 @@ const Layout = ({ children }: LayoutProps) => {
   const { theme } = useContext(ThemeContext);
   const containerStyles =
     theme === "dark" ? darkStyles.container : lightStyles.container;
+
+
+
   return (
     <>
       <Head>
@@ -27,14 +30,15 @@ const Layout = ({ children }: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="d-none d-lg-block">
+      
+      <div className="d-none d-lg-block ">
         <Sidebar />
       </div>
       <div className="d-block d-lg-none">
         <MobileSidebar />
       </div>
       <main
-        className={`${containerStyles} ${styles.container_fullpage} d-flex flex-column justify-content-center align-items-center position-relative`}
+        className={`${containerStyles} ${styles.container_fullpage}  d-flex flex-column justify-content-center align-items-center position-relative`}
         style={{ zIndex: "9" }}
       >
         {children}

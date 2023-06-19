@@ -110,10 +110,10 @@
 
 .videoPlayBtn{
   font-size: 50px !important;
-  margin-bottom: 20px;
   cursor: pointer !important;
   /* transition: color 0.5s ease; */
   transition: all cubic-bezier(.645, .045, .355, 1) .35s;
+  z-index: 10;
 }
 .videoPlayBtn:hover{
   color: #d90a2c !important;
