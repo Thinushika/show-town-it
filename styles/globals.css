@@ -789,18 +789,19 @@ li {
   height: max-content;
 }
 .circle{
-  width: max-content;
-  height: max-content;
   border-radius: 50%;
   background-color: transparent !important;
   animation: trail 0.9s infinite;
   width: 50px !important;
   height: 50px !important;
   background-color: #d6d6d646 !important;
-  z-index: 9;
+  z-index: 11;
+}
+.icon-play-ring {
+  position: relative;
 }
 .circle:hover{
-  transform: scale(0) !important;
+  animation-play-state: paused !important;
 }
 @keyframes trail {
   0% {

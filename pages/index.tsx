@@ -187,7 +187,7 @@ export default function Home() {
                       <div className="d-flex container-ring-icon postition-relative mb-3">
                         <div className="circle position-absolute"></div>
                         <BsPlayCircle
-                          className={`mb-0 fadeInUp-animation ${videoPlayBtn} ${
+                          className={`mb-0 fadeInUp-animation  ${videoPlayBtn} ${
                             isHovered ? "hoverEffect" : "waveEffect"
                           }`}
                           onMouseEnter={handleMouseEnter}
