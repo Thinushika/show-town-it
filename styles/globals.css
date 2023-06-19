@@ -41,7 +41,7 @@ body {
   width: 30px;
   height: 30px;
   position: absolute;
-  border: 2px solid #d90a2c;
+  border: 1px solid #d90a2c;
   border-radius: 50%;
   opacity: .5;
   top: -12px;
