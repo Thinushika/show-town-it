@@ -108,12 +108,13 @@ const Team = () => {
 
   return (
     <>
-      <div className="d-none d-lg-flex flex-column w-100 img-height position-relative">
-        <div className="d-flex flex-column flex-lg-row w-100 h-100">
+      <div className="d-none d-lg-flex flex-column w-100 img-height position-relative" style={{backgroundColor:"#131313 !important"}}>
+        <div className="d-flex flex-column flex-lg-row w-100 h-100" style={{backgroundColor:"#131313 !important"}}>
           {teamData.map((item) => (
             <div
               key={item.id}
-              className="col-12 col-lg-3 d-flex flex-column justify-content-end p-5 h-100"
+              className="col-12 col-lg-3 d-flex flex-column justify-content-end p-5 h-100 text-white" 
+              style={{backgroundColor:"#131313 !important"}}
             >
               <h2>{item.name}</h2>
               <p>{item.position}</p>
