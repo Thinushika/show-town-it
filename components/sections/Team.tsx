@@ -9,15 +9,13 @@ const Team = () => {
   const handleImageHover = (index: React.SetStateAction<string>) => {
     setHoveredImage(index);
   };
-  
-  const handleImageLeave = () => {
-    setHoveredImage('');
+
+  const handleImageLeave = (index: string) => {
+    setHoveredImage("1");
   };
 
-  useEffect(() => {
-    
-  }, [hoveredImage])
-  
+  useEffect(() => {}, [hoveredImage]);
+
   const teamData = [
     {
       id: 1,
@@ -143,17 +141,15 @@ const Team = () => {
           ))}
         </div>
         <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0">
-          {
-            hoveredImage === "1" && (
-              <div
-            className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
-          ></div>
-            )
-          }
+          {hoveredImage === "1" && (
+            <div
+              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+            ></div>
+          )}
           <div
             className={`col-12 col-lg-3 column-display-1-img justify-content-center align-items-center text-center`}
             onMouseEnter={() => handleImageHover("1")}
-            onMouseLeave={handleImageLeave}
+            onMouseLeave={() => handleImageLeave("1")}
           >
             <Image
               src="/imgs/products/products (3).jpeg"
@@ -163,17 +159,15 @@ const Team = () => {
               className=" img-fluid img-height"
             />
           </div>
-          {
-            hoveredImage === '2' && (
-              <div
-            className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
-          ></div>
-            )
-          }
+          {hoveredImage === "2" && (
+            <div
+              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+            ></div>
+          )}
           <div
             className={`col-12 col-lg-3 column-display-2-img justify-content-center align-items-center text-center`}
             onMouseEnter={() => handleImageHover("2")}
-    onMouseLeave={handleImageLeave}
+            onMouseLeave={() => handleImageLeave("2")}
           >
             <Image
               src="/imgs/products/products (2).jpeg"
@@ -183,17 +177,15 @@ const Team = () => {
               className=" img-fluid img-height"
             />
           </div>
-          {
-            hoveredImage === '3' && (
-              <div
-            className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
-          ></div>
-            )
-          }
+          {hoveredImage === "3" && (
+            <div
+              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+            ></div>
+          )}
           <div
             className={`col-12 col-lg-3 column-display-3-img justify-content-center align-items-center text-center`}
             onMouseEnter={() => handleImageHover("3")}
-    onMouseLeave={handleImageLeave}
+            onMouseLeave={() => handleImageLeave("3")}
           >
             <Image
               src="/imgs/products/products (1).jpeg"
