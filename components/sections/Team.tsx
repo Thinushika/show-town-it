@@ -143,7 +143,7 @@ const Team = () => {
         <div className="d-flex flex-column flex-lg-row w-100 position-absolute top-0 left-0">
           {hoveredImage === "1" && (
             <div
-              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+              className={`col-12 col-lg-3 column-display justify-content-center align-items-center text-center`}
             ></div>
           )}
           <div
@@ -161,7 +161,7 @@ const Team = () => {
           </div>
           {hoveredImage === "2" && (
             <div
-              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+              className={`col-12 col-lg-3 column-display justify-content-center align-items-center text-center`}
             ></div>
           )}
           <div
@@ -179,7 +179,7 @@ const Team = () => {
           </div>
           {hoveredImage === "3" && (
             <div
-              className={`col-12 col-lg-3 column-display-1 justify-content-center align-items-center text-center`}
+              className={`col-12 col-lg-3 column-display justify-content-center align-items-center text-center`}
             ></div>
           )}
           <div

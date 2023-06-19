@@ -849,3 +849,7 @@ li {
   }
 }
 
+.column-display{
+  transition: transform 0.9s ease-in-out;
+  transform: translateX(0%);
+}
