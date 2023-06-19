@@ -160,7 +160,7 @@ const Team = () => {
 
       {/* mobile */}
       <div className="d-flex d-lg-none flex-column w-100 img-height position-relative">
-        <div className="d-flex flex-column flex-lg-row w-100 h-100">
+        <div className="d-flex flex-column flex-lg-row w-100 h-100 text-white" style={{backgroundColor:"#131313 !important"}}>
           {teamDataMobile.map((item) => (
             <div
               key={item.id}
