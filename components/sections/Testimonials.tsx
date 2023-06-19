@@ -1,5 +1,9 @@
 import { useContext, useEffect, useState } from "react";
-import { BsArrowRight } from "react-icons/bs";
+import {
+  BsArrowLeftShort,
+  BsArrowRight,
+  BsArrowRightShort,
+} from "react-icons/bs";
 
 import {
   Navigation,
@@ -30,12 +34,17 @@ import { ThemeContext } from "@/components/theme/ThemeProvider";
 const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeButtonIndex, setActiveButtonIndex] = useState(0);
-
-  useEffect(() => {
-    
-  }, [activeButtonIndex])
-  
   const { theme } = useContext(ThemeContext);
+  const prevHomeButton =
+    theme === "dark" ? darkStyles.prevClientsButton : lightStyles.prevClientsButton;
+  const nextHomeButton =
+    theme === "dark" ? darkStyles.nextClientsButton : lightStyles.nextClientsButton;
+  const sliderStyles =
+    theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
+    const slidelineColor =
+    theme === "dark" ? darkStyles.slidelineColor : lightStyles.slidelineColor;
+
+  useEffect(() => {}, [activeButtonIndex]);
 
   const testimonialsData = [
     {
@@ -61,8 +70,6 @@ const Testimonials = () => {
     },
   ];
 
-  const sliderStyles =
-    theme === "dark" ? darkStyles.sliderbg : lightStyles.sliderbg;
   return (
     <div className="d-flex flex-column flex-lg-row left-right-space py-5 w-100 testimonials-styles">
       <div className="col-12 col-lg-6">
@@ -76,6 +83,9 @@ const Testimonials = () => {
       </div>
       {/* slider */}
       <div className="col-12 col-lg-6 position-relative">
+        <button className={`${prevHomeButton}`}>
+          <BsArrowLeftShort />
+        </button>
         <Swiper
           id="testimonialsSlider"
           modules={[
@@ -117,9 +127,12 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="d-flex flex-row align-items-center px-lg-5">
+        <button className={`${nextHomeButton}`}>
+          <BsArrowRightShort />
+        </button>
+        <div className="d-flex flex-row align-items-center px-lg-5 sideline-container">
           <p className="mb-0">{activeButtonIndex}</p>
-          <div className="slideline mx-2"></div>
+          <div className={`slideline mx-2 ${slidelineColor}`}></div>
           <p className="mb-0 ">{testimonialsData.length}</p>
         </div>
       </div>

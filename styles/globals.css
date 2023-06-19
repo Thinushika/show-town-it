@@ -439,6 +439,7 @@ li {
   background-color: #313131;
 }
 
+
 .footer-sec-1 {
   background-color: #131313;
 }
@@ -524,7 +525,7 @@ li {
 }
 
 #testimonialsSlider .swiper-button-prev {
-  background-image: url("/imgs/prev-light-arrow.png") !important;
+  /* background-image: url("/imgs/prev-light-arrow.png") !important; */
   background-position: center;
   background-size: cover;
   width: 30px !important;
@@ -541,7 +542,7 @@ li {
 }
 
 #testimonialsSlider .swiper-button-next {
-  background-image: url("/imgs/next-light-arrow.png") !important;
+  /* background-image: url("/imgs/next-light-arrow.png") !important; */
   background-position: center;
   background-size: cover;
   width: 30px !important;
@@ -588,7 +589,6 @@ li {
 .slideline {
   width: 60px;
   height: 2px;
-  background-color: #fff;
 }
 
 .img-height {
@@ -622,9 +622,9 @@ li {
 
 .sticky-sidebar-mobile {
   position: fixed !important;
-  right: 0;
-  top: 50%;
-  z-index: 9999999;
+  right: -10%;
+  height: max-content !important;
+  top: 78%;
 }
 
 
@@ -698,7 +698,18 @@ li {
   animation: 1.5s fadeInUp;
 }
 
+.sideline-container{
+  position: relative;
+  width: max-content !important;
+}
+
 @media screen and (max-width: 992px) {
+  .sideline-container{
+    position: absolute;
+    margin-top: -48px;
+    z-index: 9999;
+    width: max-content;
+  }
   .bg-image {
     height: 60vh !important;
   }
@@ -837,3 +848,4 @@ li {
     right: 100% !important;
   }
 }
+
