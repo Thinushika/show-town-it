@@ -55,24 +55,6 @@ const Team = () => {
     },
   ];
 
-  const teamImages = [
-    {
-      id: 1,
-      imgPath: "",
-    },
-    {
-      id: 2,
-      imgPath: "/imgs/products/products (1).jpeg",
-    },
-    {
-      id: 3,
-      imgPath: "/imgs/products/products (2).jpeg",
-    },
-    {
-      id: 4,
-      imgPath: "/imgs/products/products (3).jpeg",
-    },
-  ];
 
   const teamDataMobile = [
     {
@@ -83,7 +65,7 @@ const Team = () => {
       socialLink1: "#",
       socialLink2: "#",
       socialLink3: "#",
-      imgPath: "/imgs/products/products (1).jpeg",
+      imgPath: "/imgs/team/team (3).jpg",
     },
     {
       id: 2,
@@ -93,7 +75,7 @@ const Team = () => {
       socialLink1: "#",
       socialLink2: "#",
       socialLink3: "#",
-      imgPath: "/imgs/products/products (2).jpeg",
+      imgPath: "/imgs/team/team (2).jpg",
     },
     {
       id: 3,
@@ -103,7 +85,7 @@ const Team = () => {
       socialLink1: "#",
       socialLink2: "#",
       socialLink3: "#",
-      imgPath: "/imgs/products/products (3).jpeg",
+      imgPath: "/imgs/team/team (1).jpg",
     },
   ];
 
@@ -152,7 +134,7 @@ const Team = () => {
             onMouseLeave={() => handleImageLeave("1")}
           >
             <Image
-              src="/imgs/products/products (3).jpeg"
+              src="/imgs/team/team (3).jpg"
               alt=""
               width={400}
               height={600}
@@ -170,7 +152,7 @@ const Team = () => {
             onMouseLeave={() => handleImageLeave("2")}
           >
             <Image
-              src="/imgs/products/products (2).jpeg"
+              src="/imgs/team/team (2).jpg"
               alt=""
               width={400}
               height={600}
@@ -188,7 +170,7 @@ const Team = () => {
             onMouseLeave={() => handleImageLeave("3")}
           >
             <Image
-              src="/imgs/products/products (1).jpeg"
+              src="/imgs/team/team (1).jpg"
               alt=""
               width={400}
               height={600}
