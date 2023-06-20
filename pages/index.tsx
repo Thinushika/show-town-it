@@ -36,7 +36,6 @@ import {
 import lightStyles from "@/styles//Light.module.css";
 import darkStyles from "@/styles//Dark.module.css";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -60,7 +59,7 @@ export default function Home() {
     theme === "dark" ? darkStyles.videoPlayBtn : lightStyles.videoPlayBtn;
   const waveEffect =
     theme === "dark" ? darkStyles.waveEffect : lightStyles.waveEffect;
-    const lightTextColor =
+  const lightTextColor =
     theme === "dark" ? darkStyles.lightTextColor : lightStyles.lightTextColor;
 
   useEffect(() => {
@@ -158,7 +157,9 @@ export default function Home() {
               >
                 <div className="d-flex justify-content-center align-items-center height-75 w-100">
                   <div className="d-flex flex-column w-100 h-100 p-0 m-0 position-relative ">
-                    <div className={`${lightTextColor} d-flex position-absolute hero-image-bg-text top-0 left-0 text-center`}>
+                    <div
+                      className={`${lightTextColor} d-flex position-absolute hero-image-bg-text top-0 left-0 text-center`}
+                    >
                       {item.title}
                     </div>
                     <div
@@ -194,10 +195,15 @@ export default function Home() {
                       <p className="w-50 fadeInUp-animation">{item.desc}</p>
                       <Link href={"/"}>
                         <button
-                          className={`${buttonStyles}  px-2 py-2 fadeInUp-animation`}
+                          className={`${buttonStyles} button  d-flex flex-row px-2 py-2 fadeInUp-animation`}
                         >
                           Show Project
-                            <BsArrowRight className="arrow ms-2"  />
+                          <span
+                            className={`arrowContainer mb-0 ms-2 d-flex flex-row justify-content-center align-items-center`}
+                          >
+                            <BsArrowRight className="arrow2 mb-0" />
+                            <BsArrowRight className="arrow mb-0" />
+                          </span>
                         </button>
                       </Link>
                     </div>
@@ -230,7 +236,7 @@ export default function Home() {
                     </div>
                     <div className="d-flex position-absolute hero-image-bg-dots top-0 left-0"></div>
                     <div className="d-flex flex-column w-100 pe-5 s-space hero py-5 mb-5 mb-lg-0">
-                    <div className="d-flex container-ring-icon postition-relative mb-3">
+                      <div className="d-flex container-ring-icon postition-relative mb-3">
                         <div className="circle position-absolute"></div>
                         <BsPlayCircle
                           className={`mb-0 fadeInUp-animation  ${videoPlayBtn}`}

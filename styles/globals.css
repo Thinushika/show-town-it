@@ -908,28 +908,35 @@ li {
 
 
 
-
-
+.button {
+  position: relative; 
+}
 .arrow {
-  width: 20px;
-  height: 20px;
-  transform: translate(0, 0%);
-  transition: right 1s linear;
+  transition: transform 0.3s ease;
+}
+.arrow2{
+  position: absolute;
+  transition: transform 0.3s ease;
+  animation-delay: 0.3s !important;
+  transform: translateX(-50%);
+  opacity: 0;
 }
 
-.arrow:hover {
-  right: -50% !important;
+.button:hover .arrow {
+  transform: translateX(100%);
+}
+.button:hover .arrow2{
+  display: block !important;
+  transform: translateX(-25%) !important;
+  opacity: 1;
+}
+.arrowContainer {
+  display: inline-block;
+  overflow: hidden;
+  height: 24px;
+  width: 18px;
 }
 
-@keyframes slideRight {
-  0% {
-    right: -50px !important;
-  }
-
-  100% {
-    right: 100% !important;
-  }
-}
 
 .column-display {
   transition: transform 0.9s ease-in-out;
