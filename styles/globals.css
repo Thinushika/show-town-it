@@ -38,10 +38,6 @@ body {
   z-index: 9999999999;
 }
 
-.cursor.pointer {
-  width: 12px;
-  height: 12px;
-}
 
 .cursor::after {
   content: "";
@@ -75,6 +71,7 @@ body {
 .expand {
   animation: cursorAnim .5s forwards;
 }
+
 
 
 
@@ -923,7 +920,7 @@ li {
   }
 } */
 
-/* .container-ring-icon {
+.container-ring-icon {
   width: max-content;
   height: max-content;
 }
@@ -956,7 +953,7 @@ li {
     opacity: 0;
     transform: scale(1.5);
   }
-} */
+}
 
 
 
@@ -993,4 +990,14 @@ li {
 .column-display {
   transition: transform 0.9s ease-in-out;
   transform: translateX(0%);
+}
+
+#cursor{
+  width: 8px !important;
+  height: 8px !important;
+}
+
+button:hover + #cursor{
+  width: 15px !important;
+  height: 15px !important;
 }
