@@ -351,6 +351,12 @@ li {
   background-size: cover;
   width: 40px !important;
   height: 40px !important;
+  
+  transition: border-color 0.3s ease;
+  font-size: 30px !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 50% !important;
 }
 
 #homeSlider .swiper-button-next {
@@ -360,34 +366,26 @@ li {
   background-size: cover;
   width: 40px !important;
   height: 40px !important;
-}
-
-.prevbtnH{
+  
   transition: border-color 0.3s ease;
   font-size: 30px !important;
   background-color: transparent;
-  border: none;
-  border-radius: 50%;
-}
-.nextbtnH{
-  transition: border-color 0.3s ease;
-  font-size: 30px !important;
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
+  border: none !important;
+  border-radius: 50% !important;
 }
 
-#homeSlider .swiper-button-next:hover .nextbtnC{
+
+#homeSlider .swiper-button-next:hover{
   border: solid 2px #d90a2c !important;
   /* color: #d90a2c !important; */
   border-color: #d90a2c !important;
-  background-color: #fdfdfd7c;
+  background-color: #fdfdfd42 !important;
 }
-#homeSlider .swiper-button-prev:hover .prevbtnC{
+#homeSlider .swiper-button-prev:hover{
   border: solid 2px #d90a2c !important;
   border-color: #d90a2c !important;
   /* color: #d90a2c !important; */
-  background-color: #fdfdfd7c;
+  background-color: #fdfdfd42 !important;
 }
 #homeSlider .swiper-button-prev:after,
 #homeSlider .swiper-rtl .swiper-button-next:after,
@@ -638,6 +636,10 @@ li {
   position: absolute !important;
   bottom: 0 !important;
   right: 50px !important;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
 }
 
 #testimonialsSlider .swiper-button-prev,
@@ -645,33 +647,18 @@ li {
   left: auto !important;
   top: auto !important;
 }
-.prevbtnC{
-  transition: border-color 0.3s ease;
-  font-size: 30px !important;
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-}
-.nextbtnC{
-  transition: border-color 0.3s ease;
-  font-size: 30px !important;
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-}
 
-
-#testimonialsSlider .swiper-button-next:hover .nextbtnC{
+#testimonialsSlider .swiper-button-next:hover{
   border: solid 2px #d90a2c !important;
   /* color: #d90a2c !important; */
   border-color: #d90a2c !important;
-  background-color: #fdfdfd7c;
+  background-color: #fdfdfd42;
 }
-#testimonialsSlider .swiper-button-prev:hover .prevbtnC{
+#testimonialsSlider .swiper-button-prev:hover{
   border: solid 2px #d90a2c !important;
   border-color: #d90a2c !important;
   /* color: #d90a2c !important; */
-  background-color: #fdfdfd7c;
+  background-color: #fdfdfd42;
 }
 
 #testimonialsSlider .swiper-button-next {
@@ -683,6 +670,10 @@ li {
   position: absolute !important;
   bottom: 0 !important;
   right: 0 !important;
+  
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
 }
 
 #testimonialsSlider .swiper-button-next,

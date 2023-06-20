@@ -61,7 +61,7 @@
 .nextHomeButton {
   position: absolute;
   z-index: 999999;
-  left: 93vw;
+  left: 93.3vw;
   bottom: 6vh;
   font-size: 30px !important;
   background-color: transparent;
@@ -78,7 +78,7 @@
 .prevHomeButton {
   position: absolute;
   z-index: 99999;
-  left: 89vw;
+  left: 88.7vw;
   bottom: 6vh;
   pointer-events: none;
   font-size: 30px !important;
@@ -105,7 +105,7 @@
 .nextClientsButton {
   position: absolute;
   z-index: 999999;
-  left: 40vw;
+  left: 40.1vw;
   bottom: 20px;
   font-size: 30px !important;
   background-color: transparent;
@@ -121,7 +121,7 @@
 .prevClientsButton {
   position: absolute;
   z-index: 99999;
-  left: 37vw;
+  left: 36.4vw;
   bottom: 20px;
   font-size: 30px !important;
   background-color: transparent;
@@ -177,24 +177,23 @@
   }
 
   .nextHomeButton {
-    left: 16vw;
-    bottom: 5vh;
+    left: 16.5vw;
+    bottom: 28px;
   }
 
-
   .prevHomeButton {
-    left: 4vw;
-    bottom: 5vh;
+    left: 4.1vw;
+    bottom: 28px;
   }
 
   .nextClientsButton {
     left: 79vw;
-    bottom: 20px;
+    bottom: -5px;
   }
 
   .prevClientsButton {
     left: 67vw;
-    bottom: 20px;
+    bottom: -5px;
   }
 
 }
