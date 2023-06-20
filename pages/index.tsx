@@ -123,7 +123,7 @@ export default function Home() {
     <>
       <div className="d-flex flex-column w-100 h-100 justify-content-center  p-0 m-0 position-relative">
         <div className="dot-pattern position-absolute top-0 left-0"></div>
-        <button className={`${prevHomeButton}`}>
+        <button className={`${prevHomeButton} prevbtnH`}>
           <BsArrowLeftShort />
         </button>
         <Swiper
@@ -261,7 +261,7 @@ export default function Home() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${nextHomeButton}`}>
+        <button className={`${nextHomeButton} nextbtnH`}>
           <BsArrowRightShort />
         </button>
         <div className="d-flex flex-column position-absolute justify-content-center align-items-center right-0 top-0 h-100 slidePosition">

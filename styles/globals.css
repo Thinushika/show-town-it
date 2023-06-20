@@ -37,6 +37,12 @@ body {
   animation-delay: 0.9s !important;
   z-index: 9999999999;
 }
+
+.cursor.pointer {
+  width: 12px;
+  height: 12px;
+}
+
 .cursor::after {
   content: "";
   width: 30px;
@@ -356,6 +362,33 @@ li {
   height: 40px !important;
 }
 
+.prevbtnH{
+  transition: border-color 0.3s ease;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.nextbtnH{
+  transition: border-color 0.3s ease;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+#homeSlider .swiper-button-next:hover .nextbtnC{
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  border-color: #d90a2c !important;
+  background-color: #fdfdfd7c;
+}
+#homeSlider .swiper-button-prev:hover .prevbtnC{
+  border: solid 2px #d90a2c !important;
+  border-color: #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #fdfdfd7c;
+}
 #homeSlider .swiper-button-prev:after,
 #homeSlider .swiper-rtl .swiper-button-next:after,
 #homeSlider .swiper-button-next:after,
@@ -611,6 +644,34 @@ li {
 #testimonialsSlider .swiper-rtl .swiper-button-next {
   left: auto !important;
   top: auto !important;
+}
+.prevbtnC{
+  transition: border-color 0.3s ease;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.nextbtnC{
+  transition: border-color 0.3s ease;
+  font-size: 30px !important;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+
+
+#testimonialsSlider .swiper-button-next:hover .nextbtnC{
+  border: solid 2px #d90a2c !important;
+  /* color: #d90a2c !important; */
+  border-color: #d90a2c !important;
+  background-color: #fdfdfd7c;
+}
+#testimonialsSlider .swiper-button-prev:hover .prevbtnC{
+  border: solid 2px #d90a2c !important;
+  border-color: #d90a2c !important;
+  /* color: #d90a2c !important; */
+  background-color: #fdfdfd7c;
 }
 
 #testimonialsSlider .swiper-button-next {
@@ -871,7 +932,7 @@ li {
   }
 } */
 
-.container-ring-icon {
+/* .container-ring-icon {
   width: max-content;
   height: max-content;
 }
@@ -904,7 +965,7 @@ li {
     opacity: 0;
     transform: scale(1.5);
   }
-}
+} */
 
 
 

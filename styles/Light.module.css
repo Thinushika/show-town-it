@@ -68,24 +68,19 @@
   border: none;
   border-radius: 50%;
   width: 40px;
+  pointer-events: none;
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  transition: border-color 0.3s ease;
 }
 
-.nextHomeButton:hover {
-  border: solid 2px #d90a2c !important;
-  /* color: #d90a2c !important; */
-  border-color: #d90a2c !important;
-  background-color: #fdfdfd7c;
-}
 
 .prevHomeButton {
   position: absolute;
   z-index: 99999;
   left: 89vw;
   bottom: 6vh;
+  pointer-events: none;
   font-size: 30px !important;
   background-color: transparent;
   border: none;
@@ -94,15 +89,8 @@
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  transition: border-color 0.3s ease;
 }
 
-.prevHomeButton:hover {
-  border: solid 2px #d90a2c !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #fdfdfd7c;
-}
 
 
 
@@ -127,15 +115,9 @@
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  transition: border-color 0.3s ease;
+  pointer-events: none;
 }
 
-.nextClientsButton:hover {
-  border: solid 2px #d90a2c !important;
-  /* color: #d90a2c !important; */
-  border-color: #d90a2c !important;
-  background-color: #fdfdfd7c;
-}
 .prevClientsButton {
   position: absolute;
   z-index: 99999;
@@ -149,14 +131,7 @@
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  transition: border-color 0.3s ease;
-}
-
-.prevClientsButton:hover {
-  border: solid 2px #d90a2c !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #fdfdfd7c;
+  pointer-events: none;
 }
 
 

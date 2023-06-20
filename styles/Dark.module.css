@@ -84,14 +84,7 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
-  transition: border-color 0.3s ease;
-}
-
-.nextHomeButton:hover {
-  border: solid 2px #d90a2c !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #1313137c;
+  pointer-events: none;
 }
 
 .prevHomeButton {
@@ -107,15 +100,9 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
-  transition: border-color 0.3s ease;
+  pointer-events: none;
 }
 
-.prevHomeButton:hover {
-  border: solid 2px  !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #1313137c;
-}
 
 
 
@@ -143,15 +130,10 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
-  transition: border-color 0.3s ease;
+  pointer-events: none;
 }
 
-.nextClientsButton:hover {
-  border: solid 2px #d90a2c !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #1313137c;
-}
+
 .prevClientsButton {
   position: absolute;
   z-index: 99999;
@@ -165,14 +147,7 @@
   height: 40px;
   line-height: 30px !important;
   color: #fff;
-  transition: border-color 0.3s ease;
-}
-
-.prevClientsButton:hover {
-  border: solid 2px  !important;
-  border-color: #d90a2c !important;
-  /* color: #d90a2c !important; */
-  background-color: #1313137c;
+  pointer-events: none;
 }
 
 

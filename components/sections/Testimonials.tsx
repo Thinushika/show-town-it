@@ -83,7 +83,7 @@ const Testimonials = () => {
       </div>
       {/* slider */}
       <div className="col-12 col-lg-6 position-relative">
-        <button className={`${prevHomeButton}`}>
+        <button className={`${prevHomeButton} prevbtnC`}>
           <BsArrowLeftShort />
         </button>
         <Swiper
@@ -127,7 +127,7 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${nextHomeButton}`}>
+        <button className={`${nextHomeButton} nextbtnC`}>
           <BsArrowRightShort />
         </button>
         <div className="d-flex flex-row align-items-center px-lg-5 sideline-container">
