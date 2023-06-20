@@ -197,7 +197,7 @@ export default function Home() {
                           className={`${buttonStyles}  px-2 py-2 fadeInUp-animation`}
                         >
                           Show Project
-                            <BsArrowRight className="arrow ms-2" />
+                            <BsArrowRight className="arrow ms-2"  />
                         </button>
                       </Link>
                     </div>
