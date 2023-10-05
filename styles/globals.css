@@ -1001,3 +1001,18 @@ button:hover + #cursor{
   width: 15px !important;
   height: 15px !important;
 }
+
+
+
+.logo-container {
+  position: relative;
+}
+
+.logo-container img {
+  opacity: 1; 
+  transition: opacity 0.5s ease; 
+}
+
+.logo-container:hover img {
+  opacity: 0.8; 
+}
