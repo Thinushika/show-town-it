@@ -21,6 +21,24 @@ const Process = () => {
       title: "Common UI/UX layers and patterns creating.",
       desc: "Diseñador Gráfico y Digital y además como greate idea in front of the gráficos.",
     },
+    {
+      id: 4,
+      step: "Step 4.",
+      title: "User experience & brand strategy preparing.",
+      desc: "Diseñador Gráfico y Digital y además como greate idea in front of the gráficos.",
+    },
+    {
+      id: 5,
+      step: "Step 5.",
+      title: "Core resources preparing for the post-launch.",
+      desc: "Diseñador Gráfico y Digital y además como greate idea in front of the gráficos.",
+    },
+    {
+      id: 6,
+      step: "Step 6.",
+      title: "Common UI/UX layers and patterns creating.",
+      desc: "Diseñador Gráfico y Digital y además como greate idea in front of the gráficos.",
+    },
   ];
   return (
     <div className="d-flex flex-column text-center px-0 w-100">
