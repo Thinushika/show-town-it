@@ -67,9 +67,16 @@ const contactUs = () => {
           </div>
         </div>
         <hr />
-        <div className="d-flex flex-column flex-lg-row  w-100 contact py-5">
-          <form className="d-flex flex-column w-100 contact-form">
-            <div className="d-flex row row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <div className="d-flex">
+        <div style={{width: "100%"}}>
+          <iframe width="100%" height="600" scrolling="no" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            <Link href="https://www.maps.ie/population/">Population mapping</Link>
+          </iframe>
+          </div>
+        </div>
+        <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center  w-100 contact py-5">
+          <form className="d-flex flex-column w-75  contact-form">
+            <div className="d-flex row row-cols-1 row-cols-md-2 row-cols-lg-2">
               {/* name */}
               <div className="col d-flex flex-column py-3">
                 <label htmlFor="name">Name(required)</label>
