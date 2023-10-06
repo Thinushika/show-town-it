@@ -141,14 +141,35 @@ li {
   transition: color 0.5s ease;
 }
 
-.numberStyle:hover .nav-link {
+/* .numberStyle:hover .nav-link {
   color: #d90a2c !important;
+} */
+.numberStyle:hover .nav-link {
+  color: #fff !important;
 }
 
-.nav-item:hover .numberStyle,
+/* .nav-item:hover .numberStyle,
 .nav-item:hover .nav-link {
   color: #d90a2c !important;
+} */
+
+.nav-item:hover .nav-link {
+  /* color: #d90a2c !important; */
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
+  color: #fff
 }
+
+/* .nav-item:hover,
+.nav-item:active,
+.nav-item:focus,
+.nav-link:hover,
+.nav-link:active,
+.nav-link:focus {
+  color: #d90a2c !important;
+} */
 
 .nav-item:hover,
 .nav-item:active,
@@ -156,7 +177,11 @@ li {
 .nav-link:hover,
 .nav-link:active,
 .nav-link:focus {
-  color: #d90a2c !important;
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
 }
 
 .red-font {
@@ -749,10 +774,19 @@ li {
 }
 
 
-.nav-item.active a,
+/* .nav-item.active a,
 .nav-item.active span {
   color: #d90a2c !important;
+} */
+
+.nav-item.active a {
+  color: #fff !important;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
 }
+
 
 
 
