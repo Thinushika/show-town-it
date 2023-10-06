@@ -74,20 +74,6 @@ const Testimonials = () => {
   // }, [activeButtonIndex]);
 
   const slideCount = testimonialsData.length;
-
-  const handlePrevButtonClick = () => {
-    setActiveButtonIndex((prevIndex) => {
-      const newIndex = prevIndex - 1;
-      return newIndex < 1 ? slideCount : newIndex;
-    });
-  };
-  
-  const handleNextButtonClick = () => {
-    setActiveButtonIndex((prevIndex) => {
-      const newIndex = prevIndex + 1;
-      return newIndex > slideCount ? 1 : newIndex;
-    });
-  };
   
 
 
@@ -104,7 +90,7 @@ const Testimonials = () => {
       </div>
       {/* slider */}
       <div className="col-12 col-lg-6 position-relative">
-      <button className={`${prevHomeButton} prevbtnC`} onClick={handlePrevButtonClick}>
+      <button className={`${prevHomeButton} prevbtnC`} >
           <BsArrowLeftShort />
         </button>
         <Swiper
@@ -141,7 +127,7 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${nextHomeButton} nextbtnC`} onClick={handleNextButtonClick}>
+        <button className={`${nextHomeButton} nextbtnC`} >
           <BsArrowRightShort />
         </button>
         <div className="d-flex flex-row align-items-center px-lg-5 sideline-container">
