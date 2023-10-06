@@ -16,7 +16,9 @@
 .txtColor {
   color: #161519
 }
-
+.txtColorNav {
+  color: #fff
+}
 .heroButton {
   color: #161519 !important;
 }

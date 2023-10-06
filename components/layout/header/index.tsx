@@ -68,9 +68,9 @@ const Header = () => {
 
   const { theme } = useContext(ThemeContext);
   const LinkStyle =
-    theme === "dark" ? darkStyles.txtColor : lightStyles.txtColor;
+    theme === "dark" ? darkStyles.txtColorNav : lightStyles.txtColorNav;
   const SpanStyles =
-    theme === "dark" ? darkStyles.txtColor : lightStyles.txtColor;
+    theme === "dark" ? darkStyles.txtColorNav : lightStyles.txtColorNav;
     const closeStyles =
     theme === "dark" ? darkStyles.closeNavMobileColor : lightStyles.closeNavMobileColor;
     const drawerStyles =
