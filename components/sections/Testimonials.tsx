@@ -33,7 +33,7 @@ import { ThemeContext } from "@/components/theme/ThemeProvider";
 
 const Testimonials = () => {
   const [activeSlide, setActiveSlide] = useState(0);
-  const [activeButtonIndex, setActiveButtonIndex] = useState(0);
+  const [activeButtonIndex, setActiveButtonIndex] = useState(1);
   const { theme } = useContext(ThemeContext);
   const prevHomeButton =
     theme === "dark" ? darkStyles.prevClientsButton : lightStyles.prevClientsButton;
@@ -44,7 +44,7 @@ const Testimonials = () => {
     const slidelineColor =
     theme === "dark" ? darkStyles.slidelineColor : lightStyles.slidelineColor;
 
-  useEffect(() => {}, [activeButtonIndex]);
+  
 
   const testimonialsData = [
     {
@@ -69,6 +69,27 @@ const Testimonials = () => {
       position: "Project Manager, Colabrio",
     },
   ];
+  // useEffect(() => {
+  //   console.log("activeButtonIndex : ", activeButtonIndex)
+  // }, [activeButtonIndex]);
+
+  const slideCount = testimonialsData.length;
+
+  const handlePrevButtonClick = () => {
+    setActiveButtonIndex((prevIndex) => {
+      const newIndex = prevIndex - 1;
+      return newIndex < 1 ? slideCount : newIndex;
+    });
+  };
+  
+  const handleNextButtonClick = () => {
+    setActiveButtonIndex((prevIndex) => {
+      const newIndex = prevIndex + 1;
+      return newIndex > slideCount ? 1 : newIndex;
+    });
+  };
+  
+
 
   return (
     <div className="d-flex flex-column flex-lg-row left-right-space py-5 w-100 testimonials-styles">
@@ -83,29 +104,22 @@ const Testimonials = () => {
       </div>
       {/* slider */}
       <div className="col-12 col-lg-6 position-relative">
-        <button className={`${prevHomeButton} prevbtnC`}>
+      <button className={`${prevHomeButton} prevbtnC`} onClick={handlePrevButtonClick}>
           <BsArrowLeftShort />
         </button>
         <Swiper
           id="testimonialsSlider"
-          modules={[
-            Navigation,
-            Pagination,
-            Scrollbar,
-            A11y,
-            EffectFade,
-            Mousewheel,
-          ]}
+          modules={[Navigation, Pagination, A11y]}
           spaceBetween={0}
           slidesPerView={1}
           effect="fade"
           speed={500}
-          loop={true}
-          navigation={true}
-          onSwiper={(swiper) => console.log(swiper)}
+          navigation={{
+            prevEl: '.prevbtnC',
+            nextEl: '.nextbtnC',
+          }}
           onSlideChange={(swiper) => {
-            console.log(swiper.activeIndex);
-            setActiveButtonIndex(swiper.activeIndex);
+            setActiveButtonIndex(swiper.realIndex + 1);
           }}
         >
           {testimonialsData.map((item) => (
@@ -127,13 +141,13 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className={`${nextHomeButton} nextbtnC`}>
+        <button className={`${nextHomeButton} nextbtnC`} onClick={handleNextButtonClick}>
           <BsArrowRightShort />
         </button>
         <div className="d-flex flex-row align-items-center px-lg-5 sideline-container">
           <p className="mb-0">{activeButtonIndex}</p>
           <div className={`slideline mx-2 ${slidelineColor}`}></div>
-          <p className="mb-0 ">{testimonialsData.length}</p>
+          <p className="mb-0">{slideCount}</p>
         </div>
       </div>
     </div>

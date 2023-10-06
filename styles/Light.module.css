@@ -106,7 +106,7 @@
   position: absolute;
   z-index: 999999;
   left: 40.1vw;
-  bottom: 20px;
+  bottom: -20px;
   font-size: 30px !important;
   background-color: transparent;
   border: none;
@@ -115,14 +115,14 @@
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .prevClientsButton {
   position: absolute;
   z-index: 99999;
   left: 36.4vw;
-  bottom: 20px;
+  bottom: -20px;
   font-size: 30px !important;
   background-color: transparent;
   border: none;
@@ -131,7 +131,7 @@
   height: 40px;
   line-height: 30px !important;
   color: #161519;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 
